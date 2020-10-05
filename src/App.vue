@@ -1,15 +1,17 @@
 <template>
   <div id="app">
+    <HeaderTour/>
     <MainTour/>
   </div>
 </template>
 
 <script>
-import MainTour from './components/HeaderTour.vue';
+import HeaderTour from './components/HeaderTour.vue';
+import MainTour from './components/MainTour.vue';
 
 export default {
   name: 'App',
-  components: { MainTour },
+  components: { HeaderTour, MainTour },
 };
 </script>
 
