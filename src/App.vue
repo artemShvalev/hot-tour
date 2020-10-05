@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import MainTour from './components/MainTour.vue';
+import MainTour from './components/HeaderTour.vue';
 
 export default {
   name: 'App',
