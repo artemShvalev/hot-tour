@@ -4,6 +4,7 @@
     <MainTour/>
     <PopularTour/>
     <FormTour/>
+    <FooterTour/>
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import HeaderTour from './components/HeaderTour.vue';
 import MainTour from './components/MainTour.vue';
 import PopularTour from './components/PopularTour.vue';
 import FormTour from './components/FormTour.vue';
+import FooterTour from './components/FooterTour.vue';
 
 export default {
   name: 'App',
@@ -20,6 +22,7 @@ export default {
     MainTour,
     PopularTour,
     FormTour,
+    FooterTour,
   },
 };
 </script>

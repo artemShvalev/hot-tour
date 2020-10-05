@@ -7,7 +7,8 @@
        <p>НЕМНОГО О ВАС</p>
      </div>
      <div class="first__form">
-       <label for="name">Имя<input type="text" name="name" id="name"></label>
+       <label for="name">Имя<span class="required">*</span><input type="text" name="name" id="name">
+       </label>
        <label for="tel">Телефон<input type="tel" name="name" id="tel" placeholder="+7___ ___ __ __">
        </label>
      </div>
@@ -15,7 +16,7 @@
         <p>О ПУТЕШЕСТВИИ</p>
      </div>
      <div class="second__form">
-       <label for="advice">Куда и когда хотите поехать
+       <label for="advice">Куда и когда хотите поехать<span class="required">*</span>
          <input type="text" name="name" id="advice" placeholder="Континент, страна или город" >
        </label>
        <label for="when">Когда?
@@ -58,6 +59,17 @@
          статей и лайфхаков для путешественников.
          Если вдруг вам не понравится,
          вы сможете отписаться в любой момент.</span>
+     </div>
+     <div class="personal">
+       <input type="checkbox" id="personal"><label for="personal">C обработкой своих персональных
+       данных согласен<span class="required">*</span></label>
+       <span>Отправляя заявку я подтверждаю согласие с условиями Пользовательского соглашения</span>
+     </div>
+     <div class="field">
+     <p><span class="required">*</span>Поля которые надо обязательно заполнить</p>
+     </div>
+     <div class="btn">
+       <button>Отправить <img src="../assets/img/arrbutton.png" alt=""></button>
      </div>
    </div>
 </template>
