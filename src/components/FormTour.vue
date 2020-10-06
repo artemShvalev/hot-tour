@@ -1,5 +1,5 @@
 <template>
-   <div>
+   <div class="formtour">
      <div class="form__title">
        <h3>Заявка на подбор путешествия</h3>
      </div>
@@ -7,21 +7,20 @@
        <p>НЕМНОГО О ВАС</p>
      </div>
      <div class="first__form">
-       <label for="name">Имя<span class="required">*</span><input type="text" name="name" id="name">
-       </label>
-       <label for="tel">Телефон<input type="tel" name="name" id="tel" placeholder="+7___ ___ __ __">
-       </label>
+       <label class="label__name" for="name">Имя<span class="required">*</span></label>
+         <input type="text" name="name" id="name">
+       <label class="label__tel" for="tel">Телефон</label>
+         <input type="tel" name="name" id="tel" placeholder="+7___ ___ __ __">
      </div>
      <div class="about__advice">
         <p>О ПУТЕШЕСТВИИ</p>
      </div>
      <div class="second__form">
-       <label for="advice">Куда и когда хотите поехать<span class="required">*</span>
+       <label for="advice" class="advice">Куда и когда хотите поехать<span class="required">*</span>
+       </label>
          <input type="text" name="name" id="advice" placeholder="Континент, страна или город" >
-       </label>
-       <label for="when">Когда?
+       <label for="when" class="when">Когда</label>
          <input type="date" name="date" id="when" placeholder="Даты или временной  интервал">
-       </label>
      </div>
      <div class="connection">
        <p>Удобный способ связи</p>
@@ -39,7 +38,7 @@
        <label for="telephone">Телефон</label>
        <input type="checkbox" id="telephone">
      </div>
-     <div class="about us">
+     <div class="about__us">
        <label for="internet">Интернет</label>
        <input type="checkbox" id="internet">
 
@@ -80,6 +79,153 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+  @font-face {
+    font-family: Museo Sans Cyrl;
+    src: url('../assets/fonts/Museo Sans Cyrl.ttf') format('opentype');
+  }
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .formtour{
+    background: #E5E5E5;
+    width: 1024px;
+    margin: 0 auto;
+    background-image: url("../assets/img/ellipse.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: contain;/*Если что удалить*/
+  }
+  .form__title{
+    font-family: Museo Sans Cyrl;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 43px;
+    text-align: center;
+    color: #000000;
+
+    position: absolute;
+    top: 1575px;
+    right:620px;
+  }
+
+  .about{
+    position: absolute;
+    top: 1649px;
+    left: 540px;
+    padding-top: 70px;
+
+    font-family: Museo Sans Cyrl;
+    font-size: 10px;
+    line-height: 12px;
+    border-bottom:2px solid #000000;
+  }
+  .first__form{
+    display: flex;
+  }
+  .label__name{
+    position: absolute;
+    top: 1770px;
+    padding-left: 100px;
+
+    font-family: Museo Sans Cyrl;
+    font-size: 12px;
+    line-height: 12px;
+    text-align: center;
+    color: #000000;
+  }
+  .required{
+    color: crimson;
+  }
+  .label__tel{
+    position: absolute;
+    top: 1770px;
+    padding-left: 500px;
+
+    font-family: Museo Sans Cyrl;
+    font-size: 12px;
+    line-height: 12px;
+    text-align: center;
+    color: #000000;
+  }
+  input{
+    background: #FFFFFF;
+    border: 1px solid #E7E7E7;
+    box-sizing: border-box;
+    border-radius: 3px;
+    width: 380px;
+    height: 50px;
+  }
+  #name{
+    position: absolute;
+    top: 1785px;
+    left:535px;
+  }
+  #tel{
+    position: absolute;
+    top: 1785px;
+    left:940px;
+  }
+  .about__advice{
+    position: absolute;
+    top: 1835px;
+    left: 540px;
+    padding-top: 70px;
+
+    font-family: Museo Sans Cyrl;
+    font-size: 12px;
+    line-height: 12px;
+    border-bottom:2px solid #000000;
+  }
+  .advice{
+    position: absolute;
+    top: 1940px;
+    padding-left: 100px;
+
+    font-family: Museo Sans Cyrl;
+    font-size: 12px;
+    line-height: 12px;
+    text-align: center;
+    color: #000000;
+  }
+  #advice{
+    position: absolute;
+    top: 1955px;
+    left:535px;
+  }
+  .when{
+    position: absolute;
+    top: 1940px;
+    padding-left: 500px;
+
+    font-family: Museo Sans Cyrl;
+    font-size: 12px;
+    line-height: 12px;
+    text-align: center;
+    color: #000000;
+  }
+  #when{
+    position: absolute;
+    top:1955px;
+    left:939px;
+  }
+  .connection{
+    position: absolute;
+    top: 1970px;
+    left: 540px;
+    padding-top: 70px;
+
+    font-family: Museo Sans Cyrl;
+    font-size: 12px;
+    line-height: 12px;
+    border-bottom:2px solid #000000;
+  }
+  .checked{
+    
+  }
 
 </style>

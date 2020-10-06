@@ -27,5 +27,13 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+  :root {
+    box-sizing: border-box;
+  }
+  *
+  ::before,
+  ::after {
+    box-sizing: inherit;
+  }
 </style>
