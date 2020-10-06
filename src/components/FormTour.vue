@@ -26,16 +26,16 @@
        <p>Удобный способ связи</p>
      </div>
      <div class="checked">
-       <label for="viber">Viber</label>
+       <label for="viber" class="label__viber">Viber</label>
        <input type="checkbox" id="viber">
 
-       <label for="watsapp">WhatsApp</label>
-       <input type="checkbox" id="watsapp">
+       <label for="whatsapp" class="label__whatsaap">WhatsApp</label>
+       <input type="checkbox" id="whatsapp">
 
-       <label for="mail">Почта</label>
+       <label for="mail" class="label__mail">Почта</label>
        <input type="checkbox" id="mail">
 
-       <label for="telephone">Телефон</label>
+       <label for="telephone" class="label__telephone">Телефон</label>
        <input type="checkbox" id="telephone">
      </div>
      <div class="about__us">
@@ -48,8 +48,8 @@
        <label for="soc">Соц.сети</label>
        <input type="checkbox" id="soc">
 
-       <label for="already went">Уже ездил</label>
-       <input type="checkbox" id="already went">
+       <label for="already__went">Уже ездил</label>
+       <input type="checkbox" id="already__went">
      </div>
      <div class="rss">
        <input type="checkbox" id="rss"><label for="rss">Получать свежие предложения по электронной
@@ -91,6 +91,7 @@ export default {
   .formtour{
     background: #E5E5E5;
     width: 1024px;
+    height: 100vh;
     margin: 0 auto;
     background-image: url("../assets/img/ellipse.png");
     background-position: center;
@@ -225,7 +226,74 @@ export default {
     border-bottom:2px solid #000000;
   }
   .checked{
-    
+    display: flex;
+  }
+  .label__viber{
+    font-family: Museo Sans Cyrl;
+    font-size: 16px;
+    line-height: 12px;
+    position: absolute;
+    top: 2100px;
+    left: 555px;
+  }
+  #viber{
+    width: 40px;
+    height: 40px;
+    border-radius:3px;
+    position:absolute;
+    top: 2120px;
+    left: 555px;
+  }
+  .label__whatsaap{
+    font-family: Museo Sans Cyrl;
+    font-size: 16px;
+    line-height: 12px;
+    position: absolute;
+    top: 2100px;
+    left: 625px;
+  }
+  #whatsapp{
+    width: 40px;
+    height: 40px;
+    border-radius:3px;
+    position:absolute;
+    top: 2120px;
+    left: 635px;
+  }
+  .label__mail{
+    font-family: Museo Sans Cyrl;
+    font-size: 16px;
+    line-height: 12px;
+    position: absolute;
+    top: 2100px;
+    left: 720px;
+  }
+  #mail{
+    width: 40px;
+    height: 40px;
+    border-radius:3px;
+    position:absolute;
+    top: 2120px;
+    left: 720px;
+  }
+  .label__telephone{
+    font-family: Museo Sans Cyrl;
+    font-size: 16px;
+    line-height: 12px;
+    position: absolute;
+    top: 2100px;
+    left: 780px;
+  }
+  #telephone{
+    width: 40px;
+    height: 40px;
+    border-radius:3px;
+    position:absolute;
+    top: 2120px;
+    left: 790px;
+  }
+  .about__us{
+    display: flex;
   }
 
 </style>
