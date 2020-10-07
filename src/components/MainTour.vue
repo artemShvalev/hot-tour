@@ -5,20 +5,20 @@
     </div>
     <div class="rectangle">
       <div class="spanish">
-        <a href="#"><img class="img__country" src="../assets/img/rectangle.png" alt=""></a>
-        <span class="spanish__text">Испания</span>
+        <a href="#"><img class="img__country" src="../assets/img/rectangle.png" alt="">
+        <span class="spanish__text">Испания</span></a>
       </div>
       <div class="italia">
-        <a href="#"><img class="img__country__italia" src="../assets/img/rectangle2.png" alt=""></a>
-        <span class="text__italia">Италия</span>
+        <a href="#"><img class="img__country__italia" src="../assets/img/rectangle2.png" alt="">
+        <span class="text__italia">Италия</span></a>
       </div>
       <div class="iceland">
-       <a href="#"><img class="img__country__iceland" src="../assets/img/rectangle2.png" alt=""></a>
-        <span class="text__iceland">Исландия</span>
+       <a href="#"><img class="img__country__iceland" src="../assets/img/rectangle2.png" alt="">
+        <span class="text__iceland">Исландия</span></a>
       </div>
       <div class="turkey">
-        <a href="#"><img class="img__country__turkey" src="../assets/img/rectangle2.png" alt=""></a>
-        <span class="text__turkey">Турция</span>
+        <a href="#"><img class="img__country__turkey" src="../assets/img/rectangle2.png" alt="">
+        <span class="text__turkey">Турция</span></a>
       </div>
     </div>
     <div class="main__image block-1">
@@ -165,14 +165,19 @@ export default {
   }
 
   .img__country{
-    margin: 0px;
-    padding-left: 100px;
+    position: absolute;
+    left: 550px;
+  }
+  .img__country:hover{
+    background: #FFD241;
   }
   .img__country__italia{
-    padding-left:5px ;
+    position: absolute;
+    left: 580px;
   }
   .img__country__iceland{
-    padding-left:5px ;
+    position: absolute;
+    left: 550px;
   }
   .spanish__text{
     font-family: Museo Sans Cyrl;
@@ -183,8 +188,8 @@ export default {
     color: #000000;
 
     position: absolute;
-    top:234px;
-    left:30% ;
+    top: 230px;
+    left: 538px;
   }
   .text__italia{
     font-family: Museo Sans Cyrl;

@@ -38,37 +38,44 @@
        <label for="telephone" class="label__telephone">Телефон</label>
        <input type="checkbox" id="telephone">
      </div>
+     <div class="about__us_text">
+       <p>Откуда узнали о нас</p>
+     </div>
      <div class="about__us">
-       <label for="internet">Интернет</label>
+       <label for="internet" class="label__internet">Интернет</label>
        <input type="checkbox" id="internet">
 
-       <label for="recommendation">Рекомендовали друзья</label>
+       <label for="recommendation" class="label__recommendation">Рекомендовали
+         <span class="frends">друзья</span></label>
        <input type="checkbox" id="recommendation">
 
-       <label for="soc">Соц.сети</label>
+       <label for="soc" class="label__soc">Соц.сети</label>
        <input type="checkbox" id="soc">
 
-       <label for="already__went">Уже ездил</label>
+       <label for="already__went" class="label__alredy_went">Уже ездил</label>
        <input type="checkbox" id="already__went">
      </div>
      <div class="rss">
-       <input type="checkbox" id="rss"><label for="rss">Получать свежие предложения по электронной
+       <input type="checkbox" id="rss"><label for="rss" class="label__rss">
+       'Получать свежие предложения по электронной
        почте</label>
-       <span>Каждую неделю мы делаем для вас обзор лучших экспедиций,
+       <span class="rss__text">Каждую неделю мы делаем для вас обзор лучших экспедиций,
          статей и лайфхаков для путешественников.
          Если вдруг вам не понравится,
          вы сможете отписаться в любой момент.</span>
      </div>
      <div class="personal">
-       <input type="checkbox" id="personal"><label for="personal">C обработкой своих персональных
+       <input type="checkbox" id="personal"><label for="personal" class="label__personal">
+       C обработкой  персональных
        данных согласен<span class="required">*</span></label>
-       <span>Отправляя заявку я подтверждаю согласие с условиями Пользовательского соглашения</span>
+       <span class="personal__text" >Отправляя заявку я подтверждаю согласие с условиями
+         Пользовательского соглашения</span>
      </div>
      <div class="field">
-     <p><span class="required">*</span>Поля которые надо обязательно заполнить</p>
+  <p class="field__text"><span class="required">*</span>Поля которые надо обязательно заполнить</p>
      </div>
      <div class="btn">
-       <button>Отправить <img src="../assets/img/arrbutton.png" alt=""></button>
+       <button>Отправить <img id="img" src="../assets/img/arrbutton.png" alt=""></button>
      </div>
    </div>
 </template>
@@ -292,8 +299,205 @@ export default {
     top: 2120px;
     left: 790px;
   }
+  .about__us_text{
+    position: absolute;
+    top: 1970px;
+    left: 950px;
+    padding-top: 70px;
+
+    font-family: Museo Sans Cyrl;
+    font-size: 12px;
+    line-height: 12px;
+    border-bottom:2px solid #000000;
+  }
   .about__us{
     display: flex;
+    padding-left:120px ;
+  }
+  .label__internet{
+    font-family: Museo Sans Cyrl;
+    font-size: 16px;
+    line-height: 12px;
+    position: absolute;
+    top: 2100px;
+    left: 950px;
+  }
+  #internet{
+    width: 40px;
+    height: 40px;
+    border-radius:3px;
+    position:absolute;
+    top: 2120px;
+    left: 960px;
+  }
+  .label__recommendation{
+    width: 140px;
+    font-family: Museo Sans Cyrl;
+    font-size: 16px;
+    line-height: 12px;
+    position: absolute;
+    top: 2090px;
+    left: 1030px;
+  }
+  .frends{
+     padding-left:40px;
+  }
+  #recommendation{
+    width: 40px;
+    height: 40px;
+    border-radius:3px;
+    position:absolute;
+    top: 2120px;
+    left: 1070px;
+  }
+  .label__soc{
+    font-family: Museo Sans Cyrl;
+    font-size: 16px;
+    line-height: 12px;
+    position: absolute;
+    top: 2100px;
+    left: 1160px;
+  }
+  #soc{
+    width: 40px;
+    height: 40px;
+    border-radius:3px;
+    position:absolute;
+    top: 2120px;
+    left: 1170px;
+  }
+  .label__alredy_went{
+    font-family: Museo Sans Cyrl;
+    font-size: 16px;
+    line-height: 12px;
+    position: absolute;
+    top: 2100px;
+    left: 1260px;
+  }
+  #already__went{
+    width: 40px;
+    height: 40px;
+    border-radius:3px;
+    position:absolute;
+    top: 2120px;
+    left: 1270px;
+  }
+  /*Rss*/
+  .rss{
+    display: flex;
+  }
+  #rss{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 2200px;
+    left: 475px;
+
+    background: #FFFFFF;
+    border: 1px solid #E7E7E7;
+    box-sizing: border-box;
+    border-radius: 3px;
+  }
+  .label__rss{
+    position: absolute;
+    width: 266px;
+    height: 12px;
+    top: 2200px;
+    left: 500px;
+
+    font-family: Museo Sans Cyrl;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    color: #000000;
+  }
+  .rss__text{
+    position: absolute;
+    width: 750px;
+    height: 24px;
+    left: 500px;
+    top: 2238px;
+
+    font-family: Museo Sans Cyrl;
+    font-size: 12px;
+    line-height: 12px;
+    color: #7c7a7a;
+  }
+  /*personal*/
+  .personal{
+    display:flex;
+  }
+  #personal{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 2300px;
+    left: 475px;
+
+    background: #FFFFFF;
+    border: 1px solid #E7E7E7;
+    box-sizing: border-box;
+    border-radius: 3px;
+  }
+  .label__personal{
+    position: absolute;
+    width: 266px;
+    height: 12px;
+    top: 2300px;
+    left: 500px;
+
+    font-family: Museo Sans Cyrl;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    color: #000000;
+  }
+  .personal__text{
+    position: absolute;
+    width: 750px;
+    height: 24px;
+    left: 500px;
+    top: 2338px;
+
+    font-family: Museo Sans Cyrl;
+    font-size: 12px;
+    line-height: 12px;
+    color: #7c7a7a;
+  }
+  /*field*/
+  .field{
+    display: flex;
+  }
+  .field__text{
+    position: absolute;
+    width: 310px;
+    height: 12px;
+    left: 500px;
+    top: 2390px;
+
+    font-family: Museo Sans Cyrl;
+    font-size: 10px;
+    line-height: 12px;
+  }
+  /*btn*/
+  .btn{
+    position: absolute;
+    left: 500px;
+    top: 2450px;
+  }
+  button{
+    width: 280px;
+    height: 49px;
+    background: #FFD241;
+    border-radius: 30px;
+    font-family: Museo Sans Cyrl;
+    font-size: 14px;
+    line-height: 14px;
+  }
+  #img{
+   padding-left: 160px;
   }
 
 </style>
