@@ -150,7 +150,7 @@ export default {
   }
   .main__title{
     text-align: center;
-    padding-top:45px;
+    padding-top:35px;
     font-family: Museo Sans Cyrl;
     font-style: normal;
     font-weight: bold;
@@ -161,23 +161,34 @@ export default {
   .rectangle,a{
     display:flex;
     margin: 0px;
-    padding-top: 30px;
+    padding-top: 45px;
+    position:relative;
+    right:220px;
+    top: -106px;
   }
 
   .img__country{
     position: absolute;
-    left: 550px;
+    left: 540px;
+    top: 200px;
   }
   .img__country:hover{
     background: #FFD241;
   }
   .img__country__italia{
     position: absolute;
-    left: 580px;
+    left: 640px;
+    top: 200px;
   }
   .img__country__iceland{
     position: absolute;
-    left: 550px;
+    left: 740px;
+    top: 200px;
+  }
+  .img__country__turkey{
+    position: absolute;
+    left: 840px;
+    top: 200px;
   }
   .spanish__text{
     font-family: Museo Sans Cyrl;
@@ -188,8 +199,8 @@ export default {
     color: #000000;
 
     position: absolute;
-    top: 230px;
-    left: 538px;
+    top: 207px;
+    left: 552px;
   }
   .text__italia{
     font-family: Museo Sans Cyrl;
@@ -199,9 +210,9 @@ export default {
     line-height: 17px;
     color: #000000;
 
-    position: relative;
-    top: -25px;
-    left: 40%;
+    position: absolute;
+    top: 207px;
+    left: 670px;
   }
   .text__iceland{
     font-family: Museo Sans Cyrl;
@@ -211,9 +222,9 @@ export default {
     line-height: 17px;
     color: #000000;
 
-    position: relative;
-    top: -25px;
-    left: 23%;
+    position: absolute;
+    top: 207px;
+    left: 760px;
   }
   .text__turkey{
     font-family: Museo Sans Cyrl;
@@ -223,10 +234,9 @@ export default {
     line-height: 17px;
     color: #000000;
 
-    position: relative;
-    top: -25px;
-    left: 23%;
-    left: 23%;
+    position: absolute;
+    top: 207px;
+    left: 860px;
   }
   .block-1{
     display: flex;
