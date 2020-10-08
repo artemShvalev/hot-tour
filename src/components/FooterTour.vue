@@ -41,7 +41,7 @@ export default {
     margin: 0 auto;
     display: flex;
     position: absolute;
-    top: -77px;
+    top: -106px;
     left:0px;
   }
   .img__footer{
@@ -70,7 +70,7 @@ export default {
     width: 246px;
     height: 29px;
     left: 670px;
-    top: 2574px;
+    top: 2551px;
 
     font-family: Museo Sans Cyrl;
     font-style: normal;
@@ -85,7 +85,7 @@ export default {
     width: 246px;
     height: 29px;
     left: 670px;
-    top: 2705px;
+    top: 2679px;
 
     font-family: Museo Sans Cyrl;
     font-style: normal;
