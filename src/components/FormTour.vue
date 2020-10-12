@@ -8,7 +8,8 @@
      </div>
      <div class="first__form">
        <label class="label__name" for="name">Имя<span class="required">*</span></label>
-         <input type="text" name="name" id="name">
+         <input type="text" name="name" id="name"  v-model.trim="name">
+       <div class="error__name" v-if="!name">Введите имя</div>
        <label class="label__tel" for="tel">Телефон</label>
          <input type="tel" name="name" id="tel" placeholder="+7___ ___ __ __">
      </div>
@@ -18,9 +19,11 @@
      <div class="second__form">
        <label for="advice" class="advice">Куда и когда хотите поехать<span class="required">*</span>
        </label>
-         <input type="text" name="name" id="advice" placeholder="Континент, страна или город" >
+         <input type="text" name="name" id="advice"
+                placeholder="Континент, страна или город" v-model.trim="required">
+       <div class="error" v-if="!required">Вы длолжны ввести страну или регион</div>
        <label for="when" class="when">Когда</label>
-         <input type="date" name="date" id="when" placeholder="Даты или временной  интервал">
+         <input :type="data" name="date" id="when" placeholder="Даты или временной  интервал">
      </div>
      <div class="connection">
        <p>Удобный способ связи</p>
@@ -81,8 +84,20 @@
 </template>
 
 <script>
+import { required } from 'vuelidate/lib/validators';
+
 export default {
   name: 'FormTour',
+  data() {
+    return {
+      required: '',
+      type: '',
+      name: '',
+    };
+  },
+  validations: {
+    name: required,
+  },
 };
 </script>
 
@@ -94,6 +109,26 @@ export default {
   * {
     margin: 0;
     padding: 0;
+  }
+  .error{
+    font-family: Museo Sans Cyrl;
+    font-style: normal;
+    color: red;
+    font-size: 12px;
+
+    position: absolute;
+    top: 2019px;
+    left:535px;
+  }
+  .error__name{
+    font-family: Museo Sans Cyrl;
+    font-style: normal;
+    color: red;
+    font-size: 12px;
+
+    position: absolute;
+    top: 1847px;
+    left:535px;
   }
   .formtour{
     background: #E5E5E5;
@@ -167,6 +202,7 @@ export default {
     border-radius: 3px;
     width: 380px;
     height: 50px;
+    padding: 30px;
   }
   #name{
     position: absolute;

@@ -3,7 +3,7 @@
     <HeaderTour/>
     <MainTour/>
     <PopularTour/>
-    <FormTour/>
+    <FormTour v-model="$data"/>
     <FooterTour/>
   </div>
 </template>

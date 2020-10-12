@@ -1,5 +1,5 @@
 <template>
-  <main @onSlideChange.stop="onHandler">
+  <main>
     <div class="main__title">
       <h1>Горящие туры</h1>
     </div>
@@ -32,11 +32,6 @@ export default {
   name: 'MainTour',
   components: {
     SliderTour,
-  },
-  methods: {
-    onHandler(swiperSlide) {
-      console.log(swiperSlide);
-    },
   },
 };
 </script>

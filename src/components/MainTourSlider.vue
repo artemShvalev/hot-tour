@@ -1,8 +1,6 @@
 <template>
+  <div class="all">
   <div class="main__image block-1">
-    <swiper
-      id="swiper-slide">
-      <swiper-slide >
         <img class="img__1" src="../assets/img/1.png" alt="italic">
         <div class="box__price">
           <img src="../assets/img/box-price.png" alt="">
@@ -27,13 +25,8 @@
           <img src="../assets/img/red-box.png" alt="">
           <p class="avia__text">Авиаперелет включен!</p>
         </div>
-      </swiper-slide>
-    </swiper>
   </div>
   <div class="block__2">
-    <swiper
-      class="swiper-slide">
-      <swiper-slide >
         <div class="block__img-2">
           <div>
             <img src="../assets/img/2.png" alt="island">
@@ -58,13 +51,8 @@
               27.04.19 - 04.05.19</p>
           </div>
         </div>
-      </swiper-slide>
-    </swiper>
   </div>
   <div class="block__3">
-    <swiper
-      class="swiper-slide">
-      <swiper-slide >
         <div class="block__img-3">
           <div>
             <img src="../assets/img/3.png" alt="island">
@@ -89,13 +77,8 @@
               28.04.19 - 05.05.19и еще 3 даты</p>
           </div>
         </div>
-      </swiper-slide>
-    </swiper>
   </div>
   <div class="block-4">
-    <swiper
-      class="swiper-slide">
-      <swiper-slide >
         <div>
           <img src="../assets/img/4.png" alt="italic">
         </div>
@@ -117,32 +100,14 @@
           <img src="../assets/img/red-box.png" alt="">
           <p class="tour__text">Гарантированный тур!</p>
         </div>
-        <div class="swiper-button-prev"></div>
-      </swiper-slide>
-    </swiper>
   </div>
-  <div class="swiper-button-next" @click="onSlideChange">
-    <img src="../assets/img/arr-next.png" alt="">
   </div>
 </template>
 
 <script>
-import { Swiper, SwiperSlide } from 'swiper/vue';
 
 export default {
   name: 'MainTourSlider',
-  components: {
-    Swiper,
-    SwiperSlide,
-  },
-  methods: {
-    onSwiper(swiper) {
-      console.log(swiper);
-    },
-    onSlideChange() {
-      console.log('slide change');
-    },
-  },
 };
 </script>
 
@@ -157,6 +122,10 @@ export default {
   * {
     margin: 0;
     padding: 0;
+  }
+  .all{
+    position: absolute;
+    top:-1053%;
   }
   .swiper-slide{
     width:100%;

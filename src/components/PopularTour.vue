@@ -4,6 +4,8 @@
       <div class="popular__title">
         <h2>Популярные туры</h2>
       </div>
+      <swiper>
+        <swiper-slide>
       <div class="content__box">
         <div class="content__img">
           <img src="../assets/img/popular1.png" alt="">
@@ -32,17 +34,29 @@
           <h3>От Свальбарда до Груманта</h3>
         </div>
       </div>
+        </swiper-slide>
+      </swiper>
     </div>
   </div>
 </template>
 
 <script>
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import SwiperCore, { Navigation } from 'swiper';
+
+SwiperCore.use([Navigation]);
+
 export default {
   name: 'PopularTour',
+  components: {
+    Swiper,
+    SwiperSlide,
+  },
 };
 </script>
 
 <style scoped lang="scss">
+  @import '~swiper/components/navigation/navigation';
   @font-face {
     font-family: Museo Sans Cyrl;
     src: url('../assets/fonts/Museo Sans Cyrl.ttf') format('opentype');
@@ -50,6 +64,17 @@ export default {
   * {
     margin: 0;
     padding: 0;
+  }
+
+  .swiper-slide{
+    width:100%;
+  }
+  #swiper-slide{
+    width:100%;
+  }
+  .swiper-button-next{
+    position: absolute;
+    cursor: pointer;
   }
   .content{
     background: #E5E5E5;

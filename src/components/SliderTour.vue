@@ -1,8 +1,8 @@
 <template>
   <div class="main__image block-1">
     <swiper
-      id="swiper-slide">
-      <swiper-slide >
+      @slideChange="onSlideChange">
+    <swiper-slide>
         <img class="img__1" src="../assets/img/1.png" alt="italic">
     <div class="box__price">
       <img src="../assets/img/box-price.png" alt="">
@@ -27,13 +27,12 @@
       <img src="../assets/img/red-box.png" alt="">
       <p class="avia__text">Авиаперелет включен!</p>
     </div>
-      </swiper-slide>
+    </swiper-slide>
     </swiper>
   </div>
   <div class="block__2">
-    <swiper
-      class="swiper-slide">
-      <swiper-slide >
+    <swiper>
+      <swiper-slide>
     <div class="block__img-2">
       <div>
         <img src="../assets/img/2.png" alt="island">
@@ -59,12 +58,11 @@
       </div>
     </div>
       </swiper-slide>
-  </swiper>
+    </swiper>
   </div>
   <div class="block__3">
-    <swiper
-      class="swiper-slide">
-      <swiper-slide >
+    <swiper>
+      <swiper-slide>
     <div class="block__img-3">
       <div>
         <img src="../assets/img/3.png" alt="island">
@@ -93,9 +91,8 @@
     </swiper>
   </div>
   <div class="block-4">
-    <swiper
-      class="swiper-slide">
-      <swiper-slide >
+    <swiper>
+      <swiper-slide>
     <div>
       <img src="../assets/img/4.png" alt="italic">
     </div>
@@ -120,29 +117,23 @@
       </swiper-slide>
     </swiper>
   </div>
-  <div class="swiper-button-next" @click="onSlideChange">
-    <img src="../assets/img/arr-next.png" alt="">
+  <div class="swiper-button-next">
+    <img src="../assets/img/arr-next.png" alt="" @slideChange="onSlideChange">
   </div>
-  <MainTourSlider v-if="onSlideChange(+1)"/>
 </template>
 
 <script>
 import { Swiper, SwiperSlide } from 'swiper/vue';
-import MainTourSlider from './MainTourSlider.vue';
 
 export default {
   name: 'SliderTour',
   components: {
     Swiper,
     SwiperSlide,
-    MainTourSlider,
   },
   methods: {
-    onSwiper(swiper) {
-      console.log(swiper);
-    },
     onSlideChange() {
-      this.$emit(this.onSlideChange(+1));
+      console.log('slide change');
     },
   },
 };
@@ -188,7 +179,7 @@ export default {
   .block__2{
     display: flex;
     flex-direction: column;
-    padding-left:500px ;
+    padding-left:350px;
   }
   .box__price-2{
     position: relative;
@@ -197,7 +188,8 @@ export default {
   .block__3{
     display: flex;
     flex-direction: column;
-    padding-left:100px ;
+    position: relative;
+    left: -242px
   }
   .box__price-3{
     position: relative;
@@ -206,7 +198,7 @@ export default {
   .block-4{
     display: flex;
     flex-direction: column;
-    padding-left:500px;
+    padding-left:352px;
     position: relative;
     top: -430px;
   }
