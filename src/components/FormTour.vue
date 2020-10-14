@@ -28,35 +28,35 @@
      <div class="connection">
        <p>Удобный способ связи</p>
      </div>
-     <div class="checked">
+     <div class="chec">
        <label for="viber" class="label__viber">Viber</label>
-       <input type="checkbox" id="viber">
-
+       <input type="checkbox"
+              id="viber" class="input__check"><span class="span__viber"></span>
        <label for="whatsapp" class="label__whatsaap">WhatsApp</label>
-       <input type="checkbox" id="whatsapp">
+       <input type="checkbox" id="whatsapp"><span class="span__w"></span>
 
        <label for="mail" class="label__mail">Почта</label>
-       <input type="checkbox" id="mail">
+       <input type="checkbox" id="mail"><span class="span__mail"></span>
 
        <label for="telephone" class="label__telephone">Телефон</label>
-       <input type="checkbox" id="telephone">
+       <input type="checkbox" id="telephone"><span class="span__telephone"></span>
      </div>
      <div class="about__us_text">
        <p>Откуда узнали о нас</p>
      </div>
      <div class="about__us">
        <label for="internet" class="label__internet">Интернет</label>
-       <input type="checkbox" id="internet">
+       <input type="checkbox" id="internet"><span class="span__internet"></span>
 
        <label for="recommendation" class="label__recommendation">Рекомендовали
          <span class="frends">друзья</span></label>
-       <input type="checkbox" id="recommendation">
+       <input type="checkbox" id="recommendation"><span class="span__recommendation"></span>
 
        <label for="soc" class="label__soc">Соц.сети</label>
-       <input type="checkbox" id="soc">
+       <input type="checkbox" id="soc"><span class="span__soc"></span>
 
        <label for="already__went" class="label__alredy_went">Уже ездил</label>
-       <input type="checkbox" id="already__went">
+       <input type="checkbox" id="already__went"><span class="span__went"></span>
      </div>
      <div class="rss">
        <input type="checkbox" id="rss"><label for="rss" class="label__rss">
@@ -70,7 +70,7 @@
      <div class="personal">
        <input type="checkbox" id="personal"><label for="personal" class="label__personal">
        C обработкой  персональных
-       данных согласен<span class="required">*</span></label>
+       данных согласен<span class="required">*</span><span class="span__personal"></span></label>
        <span class="personal__text" >Отправляя заявку я подтверждаю согласие с условиями
          Пользовательского соглашения</span>
      </div>
@@ -93,6 +93,8 @@ export default {
       required: '',
       type: '',
       name: '',
+      span__viber: true,
+      hasError: false,
     };
   },
   validations: {
@@ -131,19 +133,16 @@ export default {
     left:535px;
   }
   .formtour{
-    background: #E5E5E5;
     width: 1024px;
     height: 100vh;
     margin: 0 auto;
-    background-image: url("../assets/img/ellipse.png");
-    background-position: center;
-    background-repeat: no-repeat;
+    background: #E5E5E5 url("../assets/img/ellipse.png") no-repeat center;
     background-position-x: center;
     background-position-y: center;
     background-size: contain;/*Если что удалить*/
   }
   .form__title{
-    font-family: Museo Sans Cyrl;
+    font-family: Museo Sans Cyrl, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 36px;
@@ -162,7 +161,7 @@ export default {
     left: 540px;
     padding-top: 70px;
 
-    font-family: Museo Sans Cyrl;
+    font-family: Museo Sans Cyrl, sans-serif;
     font-size: 10px;
     line-height: 12px;
     border-bottom:2px solid #000000;
@@ -175,7 +174,7 @@ export default {
     top: 1770px;
     padding-left: 100px;
 
-    font-family: Museo Sans Cyrl;
+    font-family: Museo Sans Cyrl, sans-serif;
     font-size: 12px;
     line-height: 12px;
     text-align: center;
@@ -189,13 +188,13 @@ export default {
     top: 1770px;
     padding-left: 500px;
 
-    font-family: Museo Sans Cyrl;
+    font-family: Museo Sans Cyrl, sans-serif;
     font-size: 12px;
     line-height: 12px;
     text-align: center;
     color: #000000;
   }
-  input{
+  #name{
     background: #FFFFFF;
     border: 1px solid #E7E7E7;
     box-sizing: border-box;
@@ -213,6 +212,13 @@ export default {
     position: absolute;
     top: 1785px;
     left:940px;
+    background: #FFFFFF;
+    border: 1px solid #E7E7E7;
+    box-sizing: border-box;
+    border-radius: 3px;
+    width: 380px;
+    height: 50px;
+    padding: 30px;
   }
   .about__advice{
     position: absolute;
@@ -220,7 +226,7 @@ export default {
     left: 540px;
     padding-top: 70px;
 
-    font-family: Museo Sans Cyrl;
+    font-family: Museo Sans Cyrl, sans-serif;
     font-size: 12px;
     line-height: 12px;
     border-bottom:2px solid #000000;
@@ -230,7 +236,7 @@ export default {
     top: 1940px;
     padding-left: 100px;
 
-    font-family: Museo Sans Cyrl;
+    font-family: Museo Sans Cyrl, sans-serif;
     font-size: 12px;
     line-height: 12px;
     text-align: center;
@@ -240,13 +246,20 @@ export default {
     position: absolute;
     top: 1955px;
     left:535px;
+    background: #FFFFFF;
+    border: 1px solid #E7E7E7;
+    box-sizing: border-box;
+    border-radius: 3px;
+    width: 380px;
+    height: 50px;
+    padding: 30px;
   }
   .when{
     position: absolute;
     top: 1940px;
     padding-left: 500px;
 
-    font-family: Museo Sans Cyrl;
+    font-family: Museo Sans Cyrl,sans-serif;
     font-size: 12px;
     line-height: 12px;
     text-align: center;
@@ -256,6 +269,13 @@ export default {
     position: absolute;
     top:1955px;
     left:939px;
+    background: #FFFFFF;
+    border: 1px solid #E7E7E7;
+    box-sizing: border-box;
+    border-radius: 3px;
+    width: 380px;
+    height: 50px;
+    padding: 30px;
   }
   .connection{
     position: absolute;
@@ -263,32 +283,56 @@ export default {
     left: 540px;
     padding-top: 70px;
 
-    font-family: Museo Sans Cyrl;
+    font-family: Museo Sans Cyrl,sans-serif;
     font-size: 12px;
     line-height: 12px;
     border-bottom:2px solid #000000;
   }
-  .checked{
+  .check{
     display: flex;
+    position: relative;
   }
   .label__viber{
-    font-family: Museo Sans Cyrl;
+    display:block;
+    font-family: Museo Sans Cyrl,sans-serif;
     font-size: 16px;
     line-height: 12px;
     position: absolute;
     top: 2100px;
     left: 555px;
+    width: 40px;
+    height: 40px;
   }
-  #viber{
+  .input__check{
     width: 40px;
     height: 40px;
     border-radius:3px;
+    border:1px solid #8C8C8C;
+    background-color: #FFFFFF;
     position:absolute;
     top: 2120px;
     left: 555px;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  .span__viber::before{
+    content: "";
+    position: relative;
+    top: 350px;
+    left: 125px;
+    display: block;
+    width:40px ;
+    height: 40px;
+    background-size: 19px 11px;
+    background: url("../assets/img/checkbox.png") no-repeat;
+    opacity: 0;
+  }
+  .input__check:checked + .span__viber::before{
+    opacity: 1;
   }
   .label__whatsaap{
-    font-family: Museo Sans Cyrl;
+    display: block;
+    font-family: Museo Sans Cyrl,sans-serif;
     font-size: 16px;
     line-height: 12px;
     position: absolute;
@@ -299,12 +343,32 @@ export default {
     width: 40px;
     height: 40px;
     border-radius:3px;
+    border:1px solid #8C8C8C;
+    background-color: #FFFFFF;
     position:absolute;
     top: 2120px;
     left: 635px;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  .span__w::before{
+    content: "";
+    position: relative;
+    top: 310px;
+    left: 205px;
+    display: block;
+    width:40px ;
+    height: 40px;
+    background-size: 19px 11px;
+    background: url("../assets/img/checkbox.png") no-repeat;
+    opacity: 0;
+  }
+  #whatsapp:checked + .span__w::before{
+    opacity: 1;
   }
   .label__mail{
-    font-family: Museo Sans Cyrl;
+    display: block;
+    font-family: Museo Sans Cyrl,sans-serif;
     font-size: 16px;
     line-height: 12px;
     position: absolute;
@@ -318,9 +382,29 @@ export default {
     position:absolute;
     top: 2120px;
     left: 720px;
+    border:1px solid #8C8C8C;
+    background-color: #FFFFFF;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  .span__mail::before{
+    content: "";
+    position: relative;
+    top: 270px;
+    left: 290px;
+    display: block;
+    width:40px ;
+    height: 40px;
+    background-size: 19px 11px;
+    background: url("../assets/img/checkbox.png") no-repeat;
+    opacity: 0;
+  }
+  #mail:checked + .span__mail::before{
+    opacity: 1;
   }
   .label__telephone{
-    font-family: Museo Sans Cyrl;
+    display: block;
+    font-family: Museo Sans Cyrl,sans-serif;
     font-size: 16px;
     line-height: 12px;
     position: absolute;
@@ -334,6 +418,25 @@ export default {
     position:absolute;
     top: 2120px;
     left: 790px;
+    border:1px solid #8C8C8C;
+    background-color: #FFFFFF;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  .span__telephone::before{
+    content: "";
+    position: relative;
+    top: 230px;
+    left: 360px;
+    display: block;
+    width:40px ;
+    height: 40px;
+    background-size: 19px 11px;
+    background: url("../assets/img/checkbox.png") no-repeat;
+    opacity: 0;
+  }
+  #telephone:checked + .span__telephone::before{
+    opacity: 1;
   }
   .about__us_text{
     position: absolute;
@@ -341,7 +444,7 @@ export default {
     left: 950px;
     padding-top: 70px;
 
-    font-family: Museo Sans Cyrl;
+    font-family: Museo Sans Cyrl, sans-serif;
     font-size: 12px;
     line-height: 12px;
     border-bottom:2px solid #000000;
@@ -351,7 +454,8 @@ export default {
     padding-left:120px ;
   }
   .label__internet{
-    font-family: Museo Sans Cyrl;
+    display: block;
+    font-family: Museo Sans Cyrl, sans-serif;
     font-size: 16px;
     line-height: 12px;
     position: absolute;
@@ -365,10 +469,30 @@ export default {
     position:absolute;
     top: 2120px;
     left: 960px;
+    border:1px solid #8C8C8C;
+    background-color: #FFFFFF;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  .span__internet::before{
+    content: "";
+    position: relative;
+    top: 188px;
+    left: 410px;
+    display: block;
+    width:40px ;
+    height: 40px;
+    background-size: 19px 11px;
+    background: url("../assets/img/checkbox.png") no-repeat;
+    opacity: 0;
+  }
+  #internet:checked + .span__internet::before{
+    opacity: 1;
   }
   .label__recommendation{
+    display: block;
     width: 140px;
-    font-family: Museo Sans Cyrl;
+    font-family: Museo Sans Cyrl, sans-serif;
     font-size: 16px;
     line-height: 12px;
     position: absolute;
@@ -385,9 +509,29 @@ export default {
     position:absolute;
     top: 2120px;
     left: 1070px;
+    border:1px solid #8C8C8C;
+    background-color: #FFFFFF;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  .span__recommendation::before{
+    content: "";
+    position: relative;
+    top: 188px;
+    left: 480px;
+    display: block;
+    width:40px ;
+    height: 40px;
+    background-size: 19px 11px;
+    background: url("../assets/img/checkbox.png") no-repeat;
+    opacity: 0;
+  }
+  #recommendation:checked + .span__recommendation::before{
+    opacity: 1;
   }
   .label__soc{
-    font-family: Museo Sans Cyrl;
+    display: block;
+    font-family: Museo Sans Cyrl, sans-serif;
     font-size: 16px;
     line-height: 12px;
     position: absolute;
@@ -401,9 +545,29 @@ export default {
     position:absolute;
     top: 2120px;
     left: 1170px;
+    border:1px solid #8C8C8C;
+    background-color: #FFFFFF;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  .span__soc::before{
+    content: "";
+    position: relative;
+    top: 188px;
+    left: 540px;
+    display: block;
+    width:40px ;
+    height: 40px;
+    background-size: 19px 11px;
+    background: url("../assets/img/checkbox.png") no-repeat;
+    opacity: 0;
+  }
+  #soc:checked + .span__soc::before{
+    opacity: 1;
   }
   .label__alredy_went{
-    font-family: Museo Sans Cyrl;
+    display: block;
+    font-family: Museo Sans Cyrl, sans-serif;
     font-size: 16px;
     line-height: 12px;
     position: absolute;
@@ -417,6 +581,25 @@ export default {
     position:absolute;
     top: 2120px;
     left: 1270px;
+    border:1px solid #8C8C8C;
+    background-color: #FFFFFF;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  .span__went::before{
+    content: "";
+    position: relative;
+    top: 188px;
+    left: 601px;
+    display: block;
+    width:40px ;
+    height: 40px;
+    background-size: 19px 11px;
+    background: url("../assets/img/checkbox.png") no-repeat;
+    opacity: 0;
+  }
+  #already__went:checked + .span__went::before{
+    opacity: 1;
   }
   /*Rss*/
   .rss{
@@ -441,7 +624,7 @@ export default {
     top: 2200px;
     left: 500px;
 
-    font-family: Museo Sans Cyrl;
+    font-family: Museo Sans Cyrl, sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 10px;
@@ -455,7 +638,7 @@ export default {
     left: 500px;
     top: 2238px;
 
-    font-family: Museo Sans Cyrl;
+    font-family: Museo Sans Cyrl, sans-serif;
     font-size: 12px;
     line-height: 12px;
     color: #7c7a7a;
@@ -470,25 +653,39 @@ export default {
     height: 15px;
     top: 2300px;
     left: 475px;
-
-    background: #FFFFFF;
-    border: 1px solid #E7E7E7;
     box-sizing: border-box;
     border-radius: 3px;
+    border:1px solid #8C8C8C;
+    background-color: #FFFFFF;
+    -webkit-appearance: none;
+    appearance: none;
   }
   .label__personal{
+    display: block;
     position: absolute;
     width: 266px;
     height: 12px;
     top: 2300px;
     left: 500px;
 
-    font-family: Museo Sans Cyrl;
+    font-family: Museo Sans Cyrl, sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 10px;
     line-height: 12px;
     color: #000000;
+  }
+  .span__personal::before{
+    content: "";
+    position: relative;
+    top: -11px;
+    left: -20px;
+    display: block;
+    width:40px ;
+    height: 40px;
+    background-size: 4px 9px;
+    background: url("../assets/img/checboxSmall.png") no-repeat;
+    opacity: 1;
   }
   .personal__text{
     position: absolute;
@@ -497,7 +694,7 @@ export default {
     left: 500px;
     top: 2338px;
 
-    font-family: Museo Sans Cyrl;
+    font-family: Museo Sans Cyrl, sans-serif;
     font-size: 12px;
     line-height: 12px;
     color: #7c7a7a;
@@ -513,7 +710,7 @@ export default {
     left: 500px;
     top: 2390px;
 
-    font-family: Museo Sans Cyrl;
+    font-family: Museo Sans Cyrl, sans-serif;
     font-size: 10px;
     line-height: 12px;
   }
@@ -528,7 +725,7 @@ export default {
     height: 49px;
     background: #FFD241;
     border-radius: 30px;
-    font-family: Museo Sans Cyrl;
+    font-family: Museo Sans Cyrl, sans-serif;
     font-size: 14px;
     line-height: 14px;
   }
