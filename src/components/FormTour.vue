@@ -59,7 +59,8 @@
        <input type="checkbox" id="already__went"><span class="span__went"></span>
      </div>
      <div class="rss">
-       <input type="checkbox" id="rss"><label for="rss" class="label__rss">
+       <input type="checkbox" id="rss"><span class="rss__span"></span>
+       <label for="rss" class="label__rss">
        'Получать свежие предложения по электронной
        почте</label>
        <span class="rss__text">Каждую неделю мы делаем для вас обзор лучших экспедиций,
@@ -68,9 +69,12 @@
          вы сможете отписаться в любой момент.</span>
      </div>
      <div class="personal">
-       <input type="checkbox" id="personal"><label for="personal" class="label__personal">
+       <input type="checkbox" id="personal"><span class="span__personal" @click="showModal">
+       </span><ModalForm v-show="isModalVisible"
+                         @close="closeModal"/>
+       <label for="personal" class="label__personal">
        C обработкой  персональных
-       данных согласен<span class="required">*</span><span class="span__personal"></span></label>
+       данных согласен<span class="required">*</span></label>
        <span class="personal__text" >Отправляя заявку я подтверждаю согласие с условиями
          Пользовательского соглашения</span>
      </div>
@@ -85,6 +89,7 @@
 
 <script>
 import { required } from 'vuelidate/lib/validators';
+import ModalForm from './_ModalForm.vue';
 
 export default {
   name: 'FormTour',
@@ -95,10 +100,22 @@ export default {
       name: '',
       span__viber: true,
       hasError: false,
+      isModalVisible: false,
     };
   },
   validations: {
     name: required,
+  },
+  components: {
+    ModalForm,
+  },
+  methods: {
+    showModal() {
+      this.isModalVisible = true;
+    },
+    closeModal() {
+      this.isModalVisible = false;
+    },
   },
 };
 </script>
@@ -314,6 +331,7 @@ export default {
     left: 555px;
     -webkit-appearance: none;
     appearance: none;
+    outline: none;
   }
   .span__viber::before{
     content: "";
@@ -329,6 +347,7 @@ export default {
   }
   .input__check:checked + .span__viber::before{
     opacity: 1;
+    transition: all .4s ease-in-out .3s;
   }
   .label__whatsaap{
     display: block;
@@ -350,6 +369,7 @@ export default {
     left: 635px;
     -webkit-appearance: none;
     appearance: none;
+    outline: none;
   }
   .span__w::before{
     content: "";
@@ -365,6 +385,7 @@ export default {
   }
   #whatsapp:checked + .span__w::before{
     opacity: 1;
+    transition: all .4s ease-in-out .3s;
   }
   .label__mail{
     display: block;
@@ -386,6 +407,7 @@ export default {
     background-color: #FFFFFF;
     -webkit-appearance: none;
     appearance: none;
+    outline: none;
   }
   .span__mail::before{
     content: "";
@@ -401,6 +423,7 @@ export default {
   }
   #mail:checked + .span__mail::before{
     opacity: 1;
+    transition: all .4s ease-in-out .3s;
   }
   .label__telephone{
     display: block;
@@ -422,6 +445,7 @@ export default {
     background-color: #FFFFFF;
     -webkit-appearance: none;
     appearance: none;
+    outline: none;
   }
   .span__telephone::before{
     content: "";
@@ -437,6 +461,7 @@ export default {
   }
   #telephone:checked + .span__telephone::before{
     opacity: 1;
+    transition: all .4s ease-in-out .3s;
   }
   .about__us_text{
     position: absolute;
@@ -473,6 +498,7 @@ export default {
     background-color: #FFFFFF;
     -webkit-appearance: none;
     appearance: none;
+    outline: none;
   }
   .span__internet::before{
     content: "";
@@ -488,6 +514,7 @@ export default {
   }
   #internet:checked + .span__internet::before{
     opacity: 1;
+    transition: all .4s ease-in-out .3s;
   }
   .label__recommendation{
     display: block;
@@ -513,6 +540,7 @@ export default {
     background-color: #FFFFFF;
     -webkit-appearance: none;
     appearance: none;
+    outline: none;
   }
   .span__recommendation::before{
     content: "";
@@ -528,6 +556,7 @@ export default {
   }
   #recommendation:checked + .span__recommendation::before{
     opacity: 1;
+    transition: all .4s ease-in-out .3s;
   }
   .label__soc{
     display: block;
@@ -549,6 +578,7 @@ export default {
     background-color: #FFFFFF;
     -webkit-appearance: none;
     appearance: none;
+    outline: none;
   }
   .span__soc::before{
     content: "";
@@ -564,6 +594,7 @@ export default {
   }
   #soc:checked + .span__soc::before{
     opacity: 1;
+    transition: all .4s ease-in-out .3s;
   }
   .label__alredy_went{
     display: block;
@@ -585,6 +616,7 @@ export default {
     background-color: #FFFFFF;
     -webkit-appearance: none;
     appearance: none;
+    outline: none;
   }
   .span__went::before{
     content: "";
@@ -600,6 +632,7 @@ export default {
   }
   #already__went:checked + .span__went::before{
     opacity: 1;
+    transition: all .4s ease-in-out .3s;
   }
   /*Rss*/
   .rss{
@@ -616,8 +649,31 @@ export default {
     border: 1px solid #E7E7E7;
     box-sizing: border-box;
     border-radius: 3px;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+  }
+  .rss__span::before{
+    content: "";
+    position: relative;
+    top: 217px;
+    left: 36px;
+    display: block;
+    width:15px ;
+    height: 15px;
+    border-radius: 3px;
+    background-size: 4px 9px;
+    background: url("../assets/img/checboxSmall.png") no-repeat;
+    background-position-y: 4px;
+    background-position-x:1px;
+    opacity: 0;
+  }
+  #rss:checked + .rss__span::before{
+    opacity: 1;
+    transition: all .5s;
   }
   .label__rss{
+    display: block;
     position: absolute;
     width: 266px;
     height: 12px;
@@ -655,10 +711,11 @@ export default {
     left: 475px;
     box-sizing: border-box;
     border-radius: 3px;
-    border:1px solid #8C8C8C;
+    border:1px solid #CB0037;
     background-color: #FFFFFF;
     -webkit-appearance: none;
     appearance: none;
+    outline: none;
   }
   .label__personal{
     display: block;
@@ -678,14 +735,24 @@ export default {
   .span__personal::before{
     content: "";
     position: relative;
-    top: -11px;
-    left: -20px;
+    top: 300px;
+    left: 34px;
     display: block;
-    width:40px ;
-    height: 40px;
+    width:15px ;
+    height: 15px;
+    border-radius: 3px;
     background-size: 4px 9px;
     background: url("../assets/img/checboxSmall.png") no-repeat;
+    background-position-y: 4px;
+    background-position-x:1px;
+    opacity: 0;
+  }
+  #personal:checked + .span__personal::before{
     opacity: 1;
+    border:1px solid #FFFFFF;
+    transition: all .5s;
+    z-index:1 ;
+    outline: none;
   }
   .personal__text{
     position: absolute;
