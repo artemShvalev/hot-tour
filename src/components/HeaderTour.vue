@@ -2,8 +2,9 @@
   <div>
     <header class="header">
       <div class="wrapper">
-        <div class="burger__header">
+        <div class="burger__header" @click="open">
           <img class="burger__header" src="../assets/img/burger.png" alt="burger">
+          <AsideTour v-show="showAside"/>
         </div>
       </div>
     </header>
@@ -11,8 +12,21 @@
 </template>
 
 <script>
+import AsideTour from './AsideTour.vue';
+
 export default {
-  name: 'MainTour',
+  name: 'HeaderTour',
+  data() {
+    return {
+      showAside: false,
+    };
+  },
+  components: { AsideTour },
+  methods: {
+    open() {
+      this.showAside = true;
+    },
+  },
 };
 </script>
 
