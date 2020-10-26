@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import HeaderTour from './components/HeaderTour.vue';
+import HeaderTour from './components/BurgerTour.vue';
 import MainTour from './components/MainTour.vue';
 import PopularTour from './components/PopularTour.vue';
 import FormTour from './components/FormTour.vue';

@@ -1,18 +1,16 @@
 <template>
-<aside>
-  <div class="header__aside" @click="closeSidebarPanel"  v-if="isPanelOpen">
-    <div class="header__img">
-    <img src="../assets/img/close-aside.png" alt="">
+<aside    v-if="isPanelOpen">
+  <div class="header__aside">
+    <div class="header__img"  @click="closeSidebarPanel">
+    <img src="../assets/img/close-aside.png" alt="" >
     </div>
-  </div>
-  <div class="forms">
-    <div class="country">
-    </div>
+    <SideInfoTour  v-show="isPanelOpen"/>
   </div>
 </aside>
 </template>
 
 <script>
+import SideInfoTour from './SideInfoTour.vue';
 
 export default {
   name: 'AsideTour',
@@ -26,15 +24,15 @@ export default {
       this.isPanelOpen = false;
     },
   },
+  props: {
+    type: Boolean,
+  },
+  components: { SideInfoTour },
 };
 </script>
 
 <style scoped lang="scss">
-  aside{
-    display: flex;
-    flex-direction: row;
-    justify-content:flex-end;
-  }
+
   .header__aside{
     width: 530px;
     background: #FFD241;
@@ -44,11 +42,13 @@ export default {
     right:438px;
     cursor: pointer;
     z-index: 3000;
-    opacity: 45%;
   }
   .header__img{
     float:right ;
-    padding: 13px 16px
+    padding: 10px 10px;
+  }
+  aside{
+    visibility:visible;
   }
 
 </style>
