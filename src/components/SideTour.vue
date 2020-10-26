@@ -40,15 +40,16 @@ export default {
     top: 10px;
     position: absolute;
     right:438px;
-    cursor: pointer;
     z-index: 3000;
   }
   .header__img{
     float:right ;
     padding: 10px 10px;
+    cursor: pointer;
   }
   aside{
     visibility:visible;
+    width: 100%;
   }
 
 </style>

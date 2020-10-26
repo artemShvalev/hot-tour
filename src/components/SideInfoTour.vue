@@ -98,13 +98,13 @@
     </ul>
   </div>
 
-  <div  class="aside__text">
+  <div  class="aside__tel">
     <p>
       8 (800) 123-45-67
     </p>
   </div>
-  <div class="aside__btn">
-       <button>Подберите мне тур</button>
+  <div >
+       <button  class="aside__btn">Подберите мне тур</button>
   </div>
 </div>
 </template>
@@ -160,6 +160,7 @@ select:focus{
     border-radius: 30px;
     padding-left: 30px;
     margin-left: 120px;
+    cursor: pointer;
   }
   #date__aside{
     font-family: Museo Sans Cyrl,sans-serif;
@@ -179,6 +180,7 @@ select:focus{
     border-radius: 30px;
     padding-left: 30px;
     border: 1px solid #272727;
+    cursor: pointer;
   }
   ::-webkit-calendar-picker-indicator {
     color: transparent;
@@ -200,6 +202,7 @@ select:focus{
     background: #FFFFFF;
     border-radius: 30px;
     padding-left: 30px;
+    cursor: pointer;
   }
   #t:focus{
     outline:none;
@@ -220,6 +223,7 @@ select:focus{
     line-height: 22px;
     text-align: center;
     letter-spacing: 0.1em;
+    cursor: pointer;
   }
   ul{
     list-style: none;
@@ -230,5 +234,37 @@ select:focus{
   a{
     text-decoration: none;
     color: #141414;
+  }
+  .aside__tel{
+    position: absolute;
+    width: 249px;
+    height: 29px;
+    left: 144px;
+    top: 700px;
+
+    font-family: Museo Sans Cyrl, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.1em;
+    color: #141414;
+  }
+  .aside__btn{
+    position: absolute;
+    width: 280px;
+    height: 49px;
+    left: 144px;
+    top: 800px;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 29.5px;
+
+    font-family: Museo Sans Cyrl, sans-serif;
+    font-size: 12px;
+    line-height: 14px;
+    color: #000000;
+    outline: none;
+    cursor: pointer;
   }
 </style>
