@@ -1,5 +1,4 @@
 <template>
-  <div class="all">
   <div class="main__image block-1">
         <img class="img__1" src="../assets/img/1.png" alt="italic">
         <div class="box__price">
@@ -101,7 +100,6 @@
           <p class="tour__text">Гарантированный тур!</p>
         </div>
   </div>
-  </div>
 </template>
 
 <script>
@@ -112,9 +110,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  @import '~swiper/swiper';
-
-  @import '~swiper/swiper';
   @font-face {
     font-family: Museo Sans Cyrl;
     src: url('../assets/fonts/Museo Sans Cyrl.ttf') format('opentype');
@@ -126,18 +121,6 @@ export default {
   .all{
     position: absolute;
     top:-1053%;
-  }
-  .swiper-slide{
-    width:100%;
-  }
-  #swiper-slide{
-    width:100%;
-  }
-  .swiper-button-next{
-    position: absolute;
-    cursor: pointer;
-    right:70px;
-    top: -120px;
   }
 
   .img__1{

@@ -3,6 +3,7 @@
     <div class="main__title">
       <h1>Горящие туры</h1>
     </div>
+    <div  class="line"></div>
     <div class="rectangle">
       <div class="spanish">
         <a href="#"><img class="img__country" src="../assets/img/rectangle.png" alt="">
@@ -64,7 +65,7 @@ export default {
   .main__title{
     text-align: center;
     padding-top:35px;
-    font-family: Museo Sans Cyrl;
+    font-family: Museo Sans Cyrl, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 36px;
@@ -73,20 +74,28 @@ export default {
   }
   .rectangle,a{
     display:flex;
-    margin: 0px;
+    margin: 0;
     padding-top: 45px;
     position:relative;
     right:220px;
     top: -106px;
+  }
+  .spanish:hover{
+    background-image: url("../assets/img/rec-1.png");
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 32px;
+    position: absolute;
+    background-position-x: 530px;
+  }
+  .spanish__text:after{
+    color: #FFFFFF;
   }
 
   .img__country{
     position: absolute;
     left: 540px;
     top: 200px;
-  }
-  .img__country:hover{
-    background: #FFD241;
   }
   .img__country__italia{
     position: absolute;
@@ -104,7 +113,7 @@ export default {
     top: 200px;
   }
   .spanish__text{
-    font-family: Museo Sans Cyrl;
+    font-family: Museo Sans Cyrl,sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 14px;
@@ -296,5 +305,34 @@ export default {
     top:-17px;
     padding-left:12px;
     padding-bottom:10px ;
+  }
+  @media (max-width: 576px) {
+    main{
+      width: 375px;
+      background: #FFFFFF;
+    }
+    .line{
+      background: url("../assets/img/line.png");
+      width: 340px;
+      height: 2px;
+      background: #C4C4C4;
+      margin-left: 15px;
+      margin-top: 40px;
+    }
+    .main__title{
+      text-align: center;
+      padding-top:35px;
+      font-family: Museo Sans Cyrl, sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 26px;
+      line-height: 43px;
+      color: #000000;
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+    .rectangle{
+      display: none;
+    }
   }
 </style>

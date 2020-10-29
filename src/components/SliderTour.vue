@@ -1,4 +1,5 @@
 <template>
+  <div class="all">
   <div class="main__image block-1">
     <swiper
       @slideChange="onSlideChange">
@@ -30,7 +31,7 @@
     </swiper-slide>
     </swiper>
   </div>
-  <div class="block__2">
+  <div class="block-2">
     <swiper>
       <swiper-slide>
     <div class="block__img-2">
@@ -60,7 +61,7 @@
       </swiper-slide>
     </swiper>
   </div>
-  <div class="block__3">
+  <div class="block-3">
     <swiper>
       <swiper-slide>
     <div class="block__img-3">
@@ -120,6 +121,7 @@
   <div class="swiper-button-next">
     <img src="../assets/img/arr-next.png" alt="" @slideChange="onSlideChange">
   </div>
+  </div>
 </template>
 
 <script>
@@ -176,7 +178,7 @@ export default {
     position: relative;
     top: -53px;
   }
-  .block__2{
+  .block-2{
     display: flex;
     flex-direction: column;
     padding-left:350px;
@@ -185,11 +187,12 @@ export default {
     position: relative;
     top: -53px;
   }
-  .block__3{
+  .block-3{
     display: flex;
     flex-direction: column;
     position: relative;
-    left: -242px
+    left: 85px;
+    width: 380px;
   }
   .box__price-3{
     position: relative;
@@ -309,6 +312,40 @@ export default {
     top:-17px;
     padding-left:12px;
     padding-bottom:10px ;
+  }
+  /*mobile*/
+  @media (max-width: 576px) {
+    .swiper-button-next{
+      display: none;
+    }
+    .all{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .block-1{
+      padding-left: 10px;
+      padding-top:30px ;
+    }
+    .block-2{
+      position: absolute;
+      width: 340px;
+      height: 194px;
+      left: 18px;
+      top: 575px;
+      padding-top:35px ;
+    }
+    .block-3{
+      position: absolute;
+      width: 340px;
+      height: 196px;
+      left: 18px;
+      top: 931px;
+      padding-top:35px ;
+    }
+    .block-4{
+      display: none;
+    }
   }
 
 </style>

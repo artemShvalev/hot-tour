@@ -1,5 +1,6 @@
 <template>
   <div>
+    <div  class="line"></div>
     <div class="content">
       <div class="popular__title">
         <h2>Популярные туры</h2>
@@ -164,5 +165,45 @@ export default {
     font-size: 18px;
     line-height: 22px;
     color: #000000;
+  }
+
+  @media (max-width: 576px){
+    .content{
+      background-color: #FFFFFF;
+    }
+    .line{
+      background-image: url("../assets/img/line.png");
+      position: absolute;
+      width: 340px;
+      height: 2px;
+      left: 18px;
+      top: 1353px;
+    }
+    .popular__title{
+      position: absolute;
+      width: 350px;
+      height: 87px;
+      left: 70px;
+      top: 1346px;
+
+      font-family: Museo Sans Cyrl, sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 43px;
+    }
+    .content__box{
+      position: absolute;
+      width: 253px;
+      height: 158px;
+      top: 1400px;
+      left: -95px;
+    }
+    .subtitle-2{
+      font-family: Museo Sans Cyrl,sans-serif;
+      font-size: 9px;
+      line-height: 11px;
+      color: #000000;
+    }
   }
 </style>

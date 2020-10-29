@@ -2,7 +2,7 @@
     <div>
       <div class="footer">
         <div class="img__footer">
-        <img src="../assets/img/footer.png" alt="">
+        <img id="img" src="../assets/img/footer.png" alt="">
         </div>
         <div class="img__lineup">
         <img src="../assets/img/lineup.png" alt="">
@@ -10,12 +10,12 @@
         <div class="img__linedown">
         <img src="../assets/img/linedown.png" alt="">
         </div>
-      </div>
       <div class="phones">
-        <span>8 (800) 123-45-67</span>
+        <span><a href="#"></a>8 (800) 123-45-67</span>
       </div>
       <div class="phones__down">
         <span>8 (800) 123-45-67</span>
+      </div>
       </div>
     </div>
 </template>
@@ -67,12 +67,10 @@ export default {
   }
   .phones{
     position: absolute;
-    width: 246px;
-    height: 29px;
     left: 670px;
-    top: 2551px;
+    top: 2668px;
 
-    font-family: Museo Sans Cyrl;
+    font-family: Museo Sans Cyrl,sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
@@ -85,15 +83,51 @@ export default {
     width: 246px;
     height: 29px;
     left: 670px;
-    top: 2679px;
+    top: 2770px;
 
-    font-family: Museo Sans Cyrl;
+    font-family: Museo Sans Cyrl, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
     line-height: 29px;
     letter-spacing: 0.1em;
     color: #FFFFFF;
+  }
+  /*mobile*/
+  @media (max-width: 576px) {
+    .footer{
+      position: absolute;
+      width: 375px;
+      left: -523px;
+      top: 754px;
+    }
+    .img__footer,#img{
+      width: 375px;
+    }
+    .phones{
+      position: absolute;
+      left: 611px;
+      top: 2662px;
+      font-family: Museo Sans Cyrl, sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 29px;
+      letter-spacing: 0.1em;
+      color: #FFFFFF;
+    }
+    .phones__down{
+      position: absolute;
+      left: 611px;
+      top: 2775px;
+      font-family: Museo Sans Cyrl, sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 29px;
+      letter-spacing: 0.1em;
+      color: #FFFFFF;
+    }
   }
 
 </style>

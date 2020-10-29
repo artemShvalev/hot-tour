@@ -1,5 +1,6 @@
 <template>
    <div class="formtour">
+     <div class="line"></div>
      <div class="form__title">
        <h3>Заявка на подбор путешествия</h3>
      </div>
@@ -61,8 +62,7 @@
      <div class="rss">
        <input type="checkbox" id="rss"><span class="rss__span"></span>
        <label for="rss" class="label__rss">
-       'Получать свежие предложения по электронной
-       почте</label>
+       Получать свежие предложения по электронной почте</label>
        <span class="rss__text">Каждую неделю мы делаем для вас обзор лучших экспедиций,
          статей и лайфхаков для путешественников.
          Если вдруг вам не понравится,
@@ -798,6 +798,442 @@ export default {
   }
   #img{
    padding-left: 160px;
+  }
+
+  @media (max-width: 576px){
+    .formtour{
+      background-color: #FFFFFF;
+      background-image: none;
+    }
+    .line{
+      position: absolute;
+      width: 340px;
+      height: 2px;
+      left: 52px;
+      top: 1954px;
+      background: #C4C4C4;
+    }
+    .form__title{
+      position: absolute;
+      width: 340px;
+      height: 87px;
+      left: 18px;
+      top: 1964px;
+      font-family: Museo Sans Cyrl, sans-serif;
+      font-size: 36px;
+      line-height: 43px;
+      color: #000000;
+    }
+    .about{
+      position: absolute;
+      left: 18px;
+      top: 2080px;
+
+      font-family: Museo Sans Cyrl, sans-serif;
+      font-size: 12px;
+      line-height: 12px;
+      color: black;
+    }
+    .label__name{
+      position: absolute;
+      width: 30px;
+      height: 12px;
+      left: -80px;
+      top: 2200px;
+      font-family: Museo Sans Cyrl,sans-serif;
+      font-size: 12px;
+      line-height: 12px;
+      color: black;
+    }
+    #name{
+      position: absolute;
+      width: 340px;
+      height: 50px;
+      left: 18px;
+      top: 2230px;
+      background: #FFFFFF;
+      border: 1px solid #E7E7E7;
+      box-sizing: border-box;
+      border-radius: 3px
+    }
+    .error__name{
+      font-family: Museo Sans Cyrl, sans-serif;
+      font-style: normal;
+      color: red;
+      font-size: 12px;
+      position: absolute;
+      top: 2295px;
+      left:150px;
+      line-height: 12px;
+    }
+    .label__tel{
+      position: absolute;
+      width: 49px;
+      height: 12px;
+      left: -483px;
+      top: 2320px;
+      font-family: Museo Sans Cyrl, sans-serif;
+      font-size: 12px;
+      line-height: 12px;
+      color: black;
+    }
+    #tel{
+      position: absolute;
+      width: 340px;
+      height: 50px;
+      left: 18px;
+      top: 2340px;
+      background: #FFFFFF;
+      border: 1px solid #E7E7E7;
+      box-sizing: border-box;
+      border-radius: 3px
+    }
+    .about__advice{
+      position: absolute;
+      left: 18px;
+      top: 2380px;
+      font-family: Museo Sans Cyrl,sans-serif;
+      font-size: 12px;
+      line-height: 12px;
+    }
+    .advice{
+      position: absolute;
+      width: 174px;
+      height: 12px;
+      left: -80px;
+      top: 2490px;
+      font-family: Museo Sans Cyrl, sans-serif;
+      font-size: 12px;
+      line-height: 12px;
+      color: #000000;
+    }
+    #advice{
+      position: absolute;
+      width: 340px;
+      height: 50px;
+      left: 18px;
+      top: 2520px;
+      background: #FFFFFF;
+      border: 1px solid #E7E7E7;
+      box-sizing: border-box;
+      border-radius: 3px;
+    }
+    .error{
+      font-family: Museo Sans Cyrl,sans-serif;
+      font-style: normal;
+      color: red;
+      font-size: 12px;
+      position: absolute;
+      top: 2580px;
+      left:75px;
+      line-height: 12px;
+    }
+    .when{
+      position: absolute;
+      width: 38px;
+      height: 12px;
+      left: -480px;
+      top: 2610px;
+      font-family: Museo Sans Cyrl,sans-serif;
+      font-size: 12px;
+      line-height: 12px;
+    }
+    #when{
+      position: absolute;
+      width: 340px;
+      height: 50px;
+      left: 18px;
+      top: 2630px;
+      background: #FFFFFF;
+      border: 1px solid #E7E7E7;
+      box-sizing: border-box;
+      border-radius: 3px;
+    }
+    /*Checkboxes*/
+    .connection{
+      position: absolute;
+      left: 18px;
+      top: 2690px;
+      font-family: Museo Sans Cyrl, sans-serif;
+      font-size: 12px;
+      line-height: 12px;
+    }
+    /*Section labels*/
+    /*viber*/
+    .label__viber{
+      position: absolute;
+      left: 53px;
+      top: 2800px;
+      font-family: Museo Sans Cyrl,sans-serif;
+      font-size: 12px;
+      line-height: 12px;
+      color: #000000;
+    }
+    .span__viber::before{
+      content: "";
+      position: relative;
+      top: 350px;
+      left: 125px;
+      display: block;
+      width:40px ;
+      height: 40px;
+      background-size: 19px 11px;
+      background: url("../assets/img/checkbox.png") no-repeat;
+      opacity: 0;
+    }
+    .input__check:checked + .span__viber::before{
+      opacity: 1;
+      transition: all .4s ease-in-out .3s;
+    }
+    /*Whatsapp*/
+    .label__whatsaap{
+      position: absolute;
+      left: 120px;
+      top: 2800px;
+      font-family: Museo Sans Cyrl,sans-serif;
+      font-size: 12px;
+      line-height: 12px;
+      color: #000000;
+    }
+    .label__mail{
+      position: absolute;
+      left: 215px;
+      top: 2800px;
+      font-family: Museo Sans Cyrl,sans-serif;
+      font-size: 12px;
+      line-height: 12px;
+      color: #000000;
+    }
+    .label__telephone{
+      position: absolute;
+      left: 280px;
+      top: 2800px;
+      font-family: Museo Sans Cyrl,sans-serif;
+      font-size: 12px;
+      line-height: 12px;
+      color: #000000;
+    }
+    /*Section inputs*/
+    .input__check{
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      left: 48px;
+      top: 2820px;
+
+      background: #FFFFFF;
+      border: 1px solid #E7E7E7;
+      box-sizing: border-box;
+      border-radius: 3px;
+    }
+    #whatsapp{
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      left: 128px;
+      top: 2820px;
+
+      background: #FFFFFF;
+      border: 1px solid #E7E7E7;
+      box-sizing: border-box;
+      border-radius: 3px;
+    }
+    #mail{
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      left: 215px;
+      top: 2820px;
+
+      background: #FFFFFF;
+      border: 1px solid #E7E7E7;
+      box-sizing: border-box;
+      border-radius: 3px;
+    }
+    #telephone{
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      left: 290px;
+      top: 2820px;
+      background: #FFFFFF;
+      border: 1px solid #E7E7E7;
+      box-sizing: border-box;
+      border-radius: 3px;
+    }
+    /*second section*/
+    .about__us_text{
+      position: absolute;
+      left: 18px;
+      top: 2830px;
+      font-family: Museo Sans Cyrl, sans-serif;
+      font-size: 12px;
+      line-height: 12px;
+      color: #000000;
+    }
+    /*Second section label*/
+    .label__internet{
+      position: absolute;
+      left: 41px;
+      top: 2945px;
+      font-family: Museo Sans Cyrl, sans-serif;
+      font-size: 12px;
+      line-height: 12px;
+      color: #000000;
+    }
+    .label__recommendation{
+      position: absolute;
+      left: 110px;
+      top: 2945px;
+      font-family: Museo Sans Cyrl, sans-serif;
+      font-size: 12px;
+      line-height: 12px;
+      color: #000000;
+    }
+    .label__soc{
+      position: absolute;
+      left: 220px;
+      top: 2945px;
+      font-family: Museo Sans Cyrl, sans-serif;
+      font-size: 12px;
+      line-height: 12px;
+      color: #000000;
+    }
+    .label__alredy_went{
+      position: absolute;
+      left: 290px;
+      top: 2945px;
+      font-family: Museo Sans Cyrl, sans-serif;
+      font-size: 12px;
+      line-height: 12px;
+      color: #000000;
+    }
+    /*Second section input*/
+     #internet{
+       position: absolute;
+       width: 40px;
+       height: 40px;
+       left: 48px;
+       top: 2990px;
+       background: #FFFFFF;
+       border: 1px solid #E7E7E7;
+       box-sizing: border-box;
+       border-radius: 3px;
+     }
+    #recommendation{
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      left: 148px;
+      top: 2990px;
+      background: #FFFFFF;
+      border: 1px solid #E7E7E7;
+      box-sizing: border-box;
+      border-radius: 3px;
+    }
+    #soc{
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      left: 228px;
+      top: 2990px;
+      background: #FFFFFF;
+      border: 1px solid #E7E7E7;
+      box-sizing: border-box;
+      border-radius: 3px;
+    }
+    #already__went{
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      left: 300px;
+      top: 2990px;
+      background: #FFFFFF;
+      border: 1px solid #E7E7E7;
+      box-sizing: border-box;
+      border-radius: 3px;
+    }
+    /*rules*/
+    #rss{
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      left: 18px;
+      top: 3070px;
+      background: #FFFFFF;
+      border: 1px solid #E7E7E7;
+      box-sizing: border-box;
+      border-radius: 3px;
+    }
+    .label__rss{
+      position: absolute;
+      width: 100%;
+      left: 48px;
+      top: 3070px;
+      font-family: Museo Sans Cyrl,sans-serif;
+      font-size: 12px;
+      color: #000000;
+    }
+    .rss__text{
+      position: absolute;
+      width: 310px;
+      height: 36px;
+      left: 48px;
+      top: 3090px;
+      font-family: Museo Sans Cyrl, sans-serif;
+      font-size: 12px;
+      line-height: 12px;
+      color: #C1C1C1;
+    }
+    #personal{
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      left: 18px;
+      top: 3160px;
+      background: #FFFFFF;
+      border: 1px solid #E7E7E7;
+      box-sizing: border-box;
+      border-radius: 3px;
+    }
+    .label__personal{
+      position: absolute;
+      width: 100%;
+      left: 48px;
+      top: 3160px;
+      font-family: Museo Sans Cyrl,sans-serif;
+      font-size: 12px;
+      color: #000000;
+    }
+    .personal__text{
+      position: absolute;
+      width: 310px;
+      height: 36px;
+      left: 48px;
+      top: 3180px;
+      font-family: Museo Sans Cyrl, sans-serif;
+      font-size: 12px;
+      line-height: 12px;
+      color: #C1C1C1;
+    }
+    .field__text{
+      position: absolute;
+      width: 310px;
+      height: 12px;
+      left: 48px;
+      top: 3250px;
+      font-family: Museo Sans Cyrl, sans-serif;
+      font-size: 12px;
+      line-height: 12px;
+      color: #C1C1C1;
+    }
+    button{
+      position: absolute;
+      width: 280px;
+      height: 49px;
+      left: -453px;
+      top: 844px;
+    }
   }
 
 </style>
