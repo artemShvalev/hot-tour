@@ -58,7 +58,7 @@ export default {
   }
 
   main{
-    background: #E5E5E5;
+    background: #ffffff;
     width: 1024px;
     margin: 0 auto;
   }

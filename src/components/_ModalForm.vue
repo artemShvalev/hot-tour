@@ -10,7 +10,7 @@
           class="btn-close"
           @click="close"
         >
-          Согласен <input type="checkbox">
+          Согласен <input class="input__agree" type="checkbox">
         </button>
 
         <button
@@ -69,7 +69,9 @@ export default {
     overflow-x: auto;
     display: flex;
     flex-direction: column;
-    font-family: Calibri, sans-serif;
+    font-family: "Roboto Light",sans-serif;
+    font-size:16px;
+    padding: 15px;
   }
 
   .modal-header,
@@ -80,7 +82,7 @@ export default {
 
   .modal-header {
     border-bottom: 1px solid #eeeeee;
-    color: #4AAE9B;
+    color: #dbca6e;
     justify-content: space-between;
   }
 
@@ -100,15 +102,17 @@ export default {
     padding: 20px;
     cursor: pointer;
     font-weight: bold;
-    color: #4AAE9B;
+    color: #000000;
     background: transparent;
   }
 
   .btn-green {
     color: white;
-    background: #4AAE9B;
-    border: 1px solid #4AAE9B;
+    background: #e5d475;
+    border: 1px solid #ffffff;
     border-radius: 2px;
+    height: 70px;
+    text-align: center;
   }
   .modal-fade-enter,
   .modal-fade-leave-active {
@@ -118,6 +122,18 @@ export default {
   .modal-fade-enter-active,
   .modal-fade-leave-active {
     transition: opacity .5s ease
+  }
+  button{
+    max-width: 100%;
+  }
+  input{
+    width:40px;
+    border-radius:3px ;
+  }
+  .input__agree{
+    width:40px;
+    border-radius:3px;
+    margin-left:30px ;
   }
 
 </style>

@@ -2,7 +2,8 @@
   <div class="all">
   <div class="main__image block-1">
     <swiper
-      @slideChange="onSlideChange">
+      @swiper="onSwiper"
+      >
     <swiper-slide>
         <img class="img__1" src="../assets/img/1.png" alt="italic">
     <div class="box__price">
@@ -118,8 +119,8 @@
       </swiper-slide>
     </swiper>
   </div>
-  <div class="swiper-button-next">
-    <img src="../assets/img/arr-next.png" alt="" @slideChange="onSlideChange">
+  <div class="swiper-button-next"  @slideChange="onSlideChange">
+    <img src="../assets/img/arr-next.png" alt="">
   </div>
   </div>
 </template>
@@ -128,6 +129,11 @@
 import { Swiper, SwiperSlide } from 'swiper/vue';
 
 export default {
+  data() {
+    return {
+      swiper: null,
+    };
+  },
   name: 'SliderTour',
   components: {
     Swiper,
@@ -136,6 +142,9 @@ export default {
   methods: {
     onSlideChange() {
       console.log('slide change');
+    },
+    onSwiper(swiper) {
+      console.log(swiper);
     },
   },
 };

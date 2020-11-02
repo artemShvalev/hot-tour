@@ -1,4 +1,4 @@
-<template>
+<template  class="all">
    <div class="formtour">
      <div class="line"></div>
      <div class="form__title">
@@ -153,7 +153,7 @@ export default {
     width: 1024px;
     height: 100vh;
     margin: 0 auto;
-    background: #E5E5E5 url("../assets/img/ellipse.png") no-repeat center;
+    background: #ffffff url("../assets/img/ellipse.png") no-repeat center;
     background-position-x: center;
     background-position-y: center;
     background-size: contain;/*Если что удалить*/

@@ -1,12 +1,14 @@
 <template>
-  <div>
     <div  class="line"></div>
     <div class="content">
       <div class="popular__title">
         <h2>Популярные туры</h2>
       </div>
-      <swiper>
-        <swiper-slide>
+      <swiper
+        navigation
+        setWrapperSize
+        >
+        <swiper-slide >
       <div class="content__box">
         <div class="content__img">
           <img src="../assets/img/popular1.png" alt="">
@@ -21,6 +23,9 @@
         <div class="subtitle">
           <h3>Открытие Турции</h3>
         </div>
+      </div>
+        </swiper-slide>
+        <swiper-slide>
         <div class="content__img-2">
           <img src="../assets/img/popular2.png" alt="">
         </div>
@@ -34,21 +39,58 @@
         <div class="subtitle-2">
           <h3>От Свальбарда до Груманта</h3>
         </div>
-      </div>
+        </swiper-slide>
+        <swiper-slide >
+          <div class="content__box slider__3-box">
+            <div class="content__img slider__content-img">
+              <img src="../assets/img/popular1.png" alt="">
+            </div>
+            <div class="box__price slider__3box-price">
+              <img src="../assets/img/box-price.png" alt="">
+              <p class="box__text">37 302 <span>₽</span></p>
+            </div>
+            <div class="country slider__3-counter">
+              <p>Турция</p>
+            </div>
+            <div class="subtitle slider__3-subtitle">
+              <h3>Открытие Турции</h3>
+            </div>
+            <div class="content__img-2">
+              <img src="../assets/img/popular2.png" alt="">
+            </div>
+            <div class="box__price-2">
+              <img src="../assets/img/box-price.png" alt="">
+              <p class="box__text">145 000 <span>₽</span></p>
+            </div>
+            <div class="country-2">
+              <p>НОРВЕГИЯ, ШПИЦБЕРГЕН</p>
+            </div>
+            <div class="subtitle-2">
+              <h3>От Свальбарда до Груманта</h3>
+            </div>
+          </div>
         </swiper-slide>
       </swiper>
     </div>
-  </div>
 </template>
 
 <script>
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import SwiperCore, { Navigation } from 'swiper';
 
+import 'swiper/swiper.scss';
+import 'swiper/components/navigation/navigation.scss';
+
 SwiperCore.use([Navigation]);
 
 export default {
   name: 'PopularTour',
+  data() {
+    return {
+      init: true,
+      setWrapperSize: true,
+    };
+  },
   components: {
     Swiper,
     SwiperSlide,
@@ -57,7 +99,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  @import '~swiper/components/navigation/navigation';
   @font-face {
     font-family: Museo Sans Cyrl;
     src: url('../assets/fonts/Museo Sans Cyrl.ttf') format('opentype');
@@ -66,24 +107,26 @@ export default {
     margin: 0;
     padding: 0;
   }
-
+  .swiper-container{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: auto;
+    width: 100%;
+  }
   .swiper-slide{
-    width:100%;
-  }
-  #swiper-slide{
-    width:100%;
-  }
-  .swiper-button-next{
-    position: absolute;
-    cursor: pointer;
+    margin-right: 0;
   }
   .content{
-    background: #E5E5E5;
+    background: #ffffff;
     width: 1024px;
     margin: 0 auto;
+    position: absolute;
+    top: 1000px;
+    left: 440px;
   }
   .popular__title{
-    font-family: Museo Sans Cyrl;
+    font-family: Museo Sans Cyrl, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 36px;
@@ -91,25 +134,25 @@ export default {
     color: #000000;
 
     position: absolute;
-    top: 1077px;
     left: 38%;
     padding-top: 70px;
   }
   .content__box{
-    display:flex;
-    position: relative;
-    top: -340px;
+    height: 500px;
+    display: inline-block;
   }
   .content__img{
-    padding-left: 100px;
+    position:absolute;
+    top: 200px;
+    padding-left: 30px;
   }
   .box__price{
-    position: relative;
-    top: 170px;
-    left:-380px;
+    position: absolute;
+    top: 370px;
+    left: 30px;
   }
   .box__text{
-    font-family: Museo Sans Cyrl;
+    font-family: Museo Sans Cyrl,sans-serif;
     font-size: 18px;
     line-height: 22px;
     color: #000000;
@@ -119,52 +162,73 @@ export default {
   }
   .country{
     position: absolute;
-    top: 230px;
-    padding-left: 100px;
+    top: 430px;
+    padding-left: 30px;
 
-    font-family: Museo Sans Cyrl;
+    font-family: Museo Sans Cyrl,sans-serif;
     font-size: 9px;
     line-height: 11px;
     color: #C5B223;
   }
   .subtitle{
     position: absolute;
-    padding-left: 100px;
-    top: 250px;
+    padding-left: 30px;
+    top: 450px;
 
-    font-family: Museo Sans Cyrl;
+    font-family: Museo Sans Cyrl, sans-serif;
     font-size: 18px;
     line-height: 22px;
     color: #000000;
   }
   .content__img-2{
-    position: absolute;
-    padding-left:500px ;
+    position:absolute;
+    top: 202px;
+    left: -530px;
   }
   .box__price-2{
-      position: relative;
-      top:167px;
-      left: -140px;
+    position: absolute;
+    left: -530px;
+    top: 370px;
   }
   .country-2{
     position: absolute;
-    top: 230px;
-    padding-left: 500px;
+    top: 430px;
+    left: -530px;
 
-    font-family: Museo Sans Cyrl;
+    font-family: Museo Sans Cyrl, sans-serif;
     font-size: 9px;
     line-height: 11px;
     color: #C5B223;
   }
   .subtitle-2{
     position: absolute;
-    padding-left: 500px;
-    top: 250px;
+    top: 450px;
+    left: -530px;
 
     font-family: Museo Sans Cyrl;
     font-size: 18px;
     line-height: 22px;
     color: #000000;
+  }
+  .slider__3-box{
+    height: 500px;
+    display: inline-block;
+  }
+  .slider__content-img{
+    position: absolute;
+    left: -1000px;
+  }
+  .slider__3box-price{
+    position: absolute;
+    left: -970px;
+  }
+  .slider__3-counter{
+    position: absolute;
+    left: -999px;
+  }
+  .slider__3-subtitle{
+    position: absolute;
+    left: -999px;
   }
 
   @media (max-width: 576px){
