@@ -22,18 +22,13 @@
         <span class="text__turkey">Турция</span></a>
       </div>
     </div>
-    <SliderTour/>
   </main>
 </template>
 
 <script>
-import SliderTour from './SliderTour.vue';
 
 export default {
   name: 'MainTour',
-  components: {
-    SliderTour,
-  },
 };
 </script>
 

@@ -1,6 +1,6 @@
 <template  class="all">
-   <div class="formtour">
      <div class="line"></div>
+  <div class="formtour">
      <div class="form__title">
        <h3>Заявка на подбор путешествия</h3>
      </div>
@@ -129,6 +129,9 @@ export default {
     margin: 0;
     padding: 0;
   }
+  .all{
+    margin: 0 auto;
+  }
   .error{
     font-family: Museo Sans Cyrl;
     font-style: normal;
@@ -150,13 +153,6 @@ export default {
     left:535px;
   }
   .formtour{
-    width: 1024px;
-    height: 100vh;
-    margin: 0 auto;
-    background: #ffffff url("../assets/img/ellipse.png") no-repeat center;
-    background-position-x: center;
-    background-position-y: center;
-    background-size: contain;/*Если что удалить*/
   }
   .form__title{
     font-family: Museo Sans Cyrl, sans-serif;
@@ -189,7 +185,7 @@ export default {
   .label__name{
     position: absolute;
     top: 1770px;
-    padding-left: 100px;
+    left: 100px;
 
     font-family: Museo Sans Cyrl, sans-serif;
     font-size: 12px;
@@ -308,6 +304,7 @@ export default {
   .check{
     display: flex;
     position: relative;
+    top: -1000px;
   }
   .label__viber{
     display:block;

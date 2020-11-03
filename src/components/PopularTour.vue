@@ -6,7 +6,12 @@
       </div>
       <swiper
         navigation
-        setWrapperSize
+        :speed="700"
+        :watchOverflow="true"
+        :centeredSlidesBounds="true"
+        :followFinger="true"
+        :resistanceRatio="0.5"
+        :watchSlidesProgress="true"
         >
         <swiper-slide >
       <div class="content__box">
@@ -39,6 +44,36 @@
         <div class="subtitle-2">
           <h3>От Свальбарда до Груманта</h3>
         </div>
+        </swiper-slide>
+        <swiper-slide >
+          <div class="content__box slider__3-box">
+            <div class="content__img slider__content-img">
+              <img src="../assets/img/popular1.png" alt="">
+            </div>
+            <div class="box__price slider__3box-price">
+              <img src="../assets/img/box-price.png" alt="">
+              <p class="box__text">37 302 <span>₽</span></p>
+            </div>
+            <div class="country slider__3-counter">
+              <p>Турция</p>
+            </div>
+            <div class="subtitle slider__3-subtitle">
+              <h3>Открытие Турции</h3>
+            </div>
+            <div class="content__img-2">
+              <img src="../assets/img/popular2.png" alt="">
+            </div>
+            <div class="box__price-2">
+              <img src="../assets/img/box-price.png" alt="">
+              <p class="box__text">145 000 <span>₽</span></p>
+            </div>
+            <div class="country-2">
+              <p>НОРВЕГИЯ, ШПИЦБЕРГЕН</p>
+            </div>
+            <div class="subtitle-2">
+              <h3>От Свальбарда до Груманта</h3>
+            </div>
+          </div>
         </swiper-slide>
         <swiper-slide >
           <div class="content__box slider__3-box">
@@ -229,6 +264,9 @@ export default {
   .slider__3-subtitle{
     position: absolute;
     left: -999px;
+  }
+  .swiper-slide-active:nth-last-child(4){
+    display: none;
   }
 
   @media (max-width: 576px){

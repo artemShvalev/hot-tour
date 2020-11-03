@@ -2,9 +2,15 @@
   <div class="all">
   <div class="main__image block-1">
     <swiper
-      @swiper="onSwiper"
-      >
-    <swiper-slide>
+      navigation
+      :preventClicks="true"
+      :watchOverflow="false"
+      :centeredSlidesBounds="true"
+      :watchSlidesProgress="true"
+      :speed="700"
+      autoplay
+    >
+      <swiper-slide>
         <img class="img__1" src="../assets/img/1.png" alt="italic">
     <div class="box__price">
       <img src="../assets/img/box-price.png" alt="">
@@ -29,12 +35,7 @@
       <img src="../assets/img/red-box.png" alt="">
       <p class="avia__text">Авиаперелет включен!</p>
     </div>
-    </swiper-slide>
-    </swiper>
-  </div>
   <div class="block-2">
-    <swiper>
-      <swiper-slide>
     <div class="block__img-2">
       <div>
         <img src="../assets/img/2.png" alt="island">
@@ -58,13 +59,9 @@
         <p>8 дней / 7 ночей Русский язык<br>
           27.04.19 - 04.05.19</p>
       </div>
-    </div>
-      </swiper-slide>
-    </swiper>
-  </div>
+      </div>
+       </div>
   <div class="block-3">
-    <swiper>
-      <swiper-slide>
     <div class="block__img-3">
       <div>
         <img src="../assets/img/3.png" alt="island">
@@ -89,12 +86,8 @@
           28.04.19 - 05.05.19и еще 3 даты</p>
       </div>
     </div>
-      </swiper-slide>
-    </swiper>
-  </div>
+    </div>
   <div class="block-4">
-    <swiper>
-      <swiper-slide>
     <div>
       <img src="../assets/img/4.png" alt="italic">
     </div>
@@ -116,22 +109,243 @@
       <img src="../assets/img/red-box.png" alt="">
       <p class="tour__text">Гарантированный тур!</p>
     </div>
+    </div>
+      </swiper-slide>
+      <swiper-slide>
+        <div  class="block-1__slider">
+        <img class="img__1" src="../assets/img/1.png" alt="italic">
+        <div class="box__price">
+          <img src="../assets/img/box-price.png" alt="">
+          <p class="this__price">от 118 112 <span class="r">₽</span></p>
+        </div>
+        <div class="country">
+          <p>Италия</p>
+        </div>
+        <div class="subtitle">
+          <h3>Под небом тосканы</h3>
+        </div>
+        <div class="tags">
+          <p>Сансеполькро — (Перуджа) — Ассизи — Губбио — (Сиена) —
+            Ла Верна — Ангиари — Монтерки —
+            Ареццо — Кортона — (Пиенца) - (Монтепульчано)</p>
+        </div>
+        <div class="date">
+          <p>8 дней / 7 ночей Русский язык<br>
+            27.04.19 - 04.05.19и еще 15 дат</p>
+        </div>
+        <div class="avia__enabled">
+          <img src="../assets/img/red-box.png" alt="">
+          <p class="avia__text">Авиаперелет включен!</p>
+        </div>
+        </div>
+        <div class="block-2">
+          <div class="block__img-2">
+            <div>
+              <img src="../assets/img/2.png" alt="island">
+            </div>
+            <div class="box__price-2">
+              <img src="../assets/img/box-price.png" alt="">
+              <p class="this__price"> 140 715 <span>₽</span></p>
+            </div>
+            <div class="country">
+              <p>Исландия</p>
+            </div>
+            <div class="subtitle">
+              <h3>Майские каникулы в Исландии</h3>
+            </div>
+            <div class="tags">
+              <p>Рейкьявик — Тингвеллир — Гюдльфосс — Скафтафедль —
+                Сельяландсфосс — Скоугафосс — Йёкюльсаурлоун — Голубая Лагуна —
+                Снайфельсйёкутль — Arnarstapi — Рейкьявик</p>
+            </div>
+            <div class="date">
+              <p>8 дней / 7 ночей Русский язык<br>
+                27.04.19 - 04.05.19</p>
+            </div>
+          </div>
+        </div>
+        <div class="block-3">
+          <div class="block__img-3">
+            <div>
+              <img src="../assets/img/3.png" alt="island">
+            </div>
+            <div class="box__price-3">
+              <img src="../assets/img/box-price.png" alt="">
+              <p class="this__price">37 302  <span>₽</span></p>
+            </div>
+            <div class="country">
+              <p>Турция</p>
+            </div>
+            <div class="subtitle">
+              <h3>Открытие Турции</h3>
+            </div>
+            <div class="tags">
+              <p>Стамбул — Анкара — Каппадокия —
+                Конья — Памуккале — Эфес — Кушадасы —
+                Пергам — Ассос — Троя — Стамбул</p>
+            </div>
+            <div class="date">
+              <p>8 дней / 7 ночей Русский язык<br>
+                28.04.19 - 05.05.19и еще 3 даты</p>
+            </div>
+          </div>
+        </div>
+        <div class="block-4">
+          <div>
+            <img src="../assets/img/4.png" alt="italic">
+          </div>
+          <div class="box__price">
+            <img src="../assets/img/box-price.png" alt="">
+            <p  class="this__price-4">145 000 <span>₽</span></p>
+          </div>
+          <div class="country__4">
+            <p>НОРВЕГИЯ, ШПИЦБЕРГЕН</p>
+          </div>
+          <div class="subtitle__4">
+            <h3>От Свальбарда до Груманта</h3>
+          </div>
+          <div class="date__4">
+            <p>8 дней / 7 ночей Русский язык <br>
+              27.04.19 - 04.05.19 и еще 15 дат</p>
+          </div>
+          <div class="tour">
+            <img src="../assets/img/red-box.png" alt="">
+            <p class="tour__text">Гарантированный тур!</p>
+          </div>
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <div  class="block-1__slider">
+          <img class="img__1" src="../assets/img/1.png" alt="italic">
+          <div class="box__price">
+            <img src="../assets/img/box-price.png" alt="">
+            <p class="this__price">от 118 112 <span class="r">₽</span></p>
+          </div>
+          <div class="country">
+            <p>Италия</p>
+          </div>
+          <div class="subtitle">
+            <h3>Под небом тосканы</h3>
+          </div>
+          <div class="tags">
+            <p>Сансеполькро — (Перуджа) — Ассизи — Губбио — (Сиена) —
+              Ла Верна — Ангиари — Монтерки —
+              Ареццо — Кортона — (Пиенца) - (Монтепульчано)</p>
+          </div>
+          <div class="date">
+            <p>8 дней / 7 ночей Русский язык<br>
+              27.04.19 - 04.05.19и еще 15 дат</p>
+          </div>
+          <div class="avia__enabled">
+            <img src="../assets/img/red-box.png" alt="">
+            <p class="avia__text">Авиаперелет включен!</p>
+          </div>
+        </div>
+        <div class="block-2">
+          <div class="block__img-2">
+            <div>
+              <img src="../assets/img/2.png" alt="island">
+            </div>
+            <div class="box__price-2">
+              <img src="../assets/img/box-price.png" alt="">
+              <p class="this__price"> 140 715 <span>₽</span></p>
+            </div>
+            <div class="country">
+              <p>Исландия</p>
+            </div>
+            <div class="subtitle">
+              <h3>Майские каникулы в Исландии</h3>
+            </div>
+            <div class="tags">
+              <p>Рейкьявик — Тингвеллир — Гюдльфосс — Скафтафедль —
+                Сельяландсфосс — Скоугафосс — Йёкюльсаурлоун — Голубая Лагуна —
+                Снайфельсйёкутль — Arnarstapi — Рейкьявик</p>
+            </div>
+            <div class="date">
+              <p>8 дней / 7 ночей Русский язык<br>
+                27.04.19 - 04.05.19</p>
+            </div>
+          </div>
+        </div>
+        <div class="block-3">
+          <div class="block__img-3">
+            <div>
+              <img src="../assets/img/3.png" alt="island">
+            </div>
+            <div class="box__price-3">
+              <img src="../assets/img/box-price.png" alt="">
+              <p class="this__price">37 302  <span>₽</span></p>
+            </div>
+            <div class="country">
+              <p>Турция</p>
+            </div>
+            <div class="subtitle">
+              <h3>Открытие Турции</h3>
+            </div>
+            <div class="tags">
+              <p>Стамбул — Анкара — Каппадокия —
+                Конья — Памуккале — Эфес — Кушадасы —
+                Пергам — Ассос — Троя — Стамбул</p>
+            </div>
+            <div class="date">
+              <p>8 дней / 7 ночей Русский язык<br>
+                28.04.19 - 05.05.19и еще 3 даты</p>
+            </div>
+          </div>
+        </div>
+        <div class="block-4">
+          <div>
+            <img src="../assets/img/4.png" alt="italic">
+          </div>
+          <div class="box__price">
+            <img src="../assets/img/box-price.png" alt="">
+            <p  class="this__price-4">145 000 <span>₽</span></p>
+          </div>
+          <div class="country__4">
+            <p>НОРВЕГИЯ, ШПИЦБЕРГЕН</p>
+          </div>
+          <div class="subtitle__4">
+            <h3>От Свальбарда до Груманта</h3>
+          </div>
+          <div class="date__4">
+            <p>8 дней / 7 ночей Русский язык <br>
+              27.04.19 - 04.05.19 и еще 15 дат</p>
+          </div>
+          <div class="tour">
+            <img src="../assets/img/red-box.png" alt="">
+            <p class="tour__text">Гарантированный тур!</p>
+          </div>
+        </div>
       </swiper-slide>
     </swiper>
-  </div>
-  <div class="swiper-button-next"  @slideChange="onSlideChange">
-    <img src="../assets/img/arr-next.png" alt="">
-  </div>
+    </div>
   </div>
 </template>
 
 <script>
 import { Swiper, SwiperSlide } from 'swiper/vue';
+import SwiperCore, { Navigation, Autoplay } from 'swiper';
+
+import 'swiper/swiper.scss';
+import 'swiper/components/navigation/navigation.scss';
+
+SwiperCore.use([Navigation]);
+SwiperCore.use([Autoplay]);
 
 export default {
   data() {
     return {
-      swiper: null,
+      init: true,
+      setWrapperSize: true,
+      autoplay: {
+        delay: 5000,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+        hideOnClick: true,
+        hiddenClass: 'swiper-button-hidden',
+      },
     };
   },
   name: 'SliderTour',
@@ -139,20 +353,10 @@ export default {
     Swiper,
     SwiperSlide,
   },
-  methods: {
-    onSlideChange() {
-      console.log('slide change');
-    },
-    onSwiper(swiper) {
-      console.log(swiper);
-    },
-  },
 };
 </script>
 
 <style scoped lang="scss">
-
-  @import '~swiper/swiper';
   @font-face {
     font-family: Museo Sans Cyrl;
     src: url('../assets/fonts/Museo Sans Cyrl.ttf') format('opentype');
@@ -161,21 +365,31 @@ export default {
     margin: 0;
     padding: 0;
   }
+  .swiper-button-prev {
+    padding-left: 100px;
+  }
+  .swiper-button-next {
+    right: 94px;
+    left: auto;
+  }
+  .swiper-container{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    width: 900px;
+  }
   .swiper-slide{
-    width:100%;
+    margin-right: 0;
   }
-  #swiper-slide{
-    width:100%;
-  }
-  .swiper-button-next{
-    position: absolute;
-    left: 72%;
-    top: 58%;
-    cursor: pointer;
-  }
-
   .img__1{
     width:380px;
+  }
+  .all{
+    position:absolute;
+    left: 420px;
   }
   .block-1{
     display: flex;
@@ -190,7 +404,15 @@ export default {
   .block-2{
     display: flex;
     flex-direction: column;
-    padding-left:350px;
+    position: relative;
+    top: -470px;
+    left: 400px;
+  }
+  .block-1__slider{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 0;
   }
   .box__price-2{
     position: relative;
@@ -200,7 +422,8 @@ export default {
     display: flex;
     flex-direction: column;
     position: relative;
-    left: 85px;
+    left: 0;
+    top: -440px;
     width: 380px;
   }
   .box__price-3{
@@ -210,9 +433,9 @@ export default {
   .block-4{
     display: flex;
     flex-direction: column;
-    padding-left:352px;
     position: relative;
-    top: -430px;
+    top: -870px;
+    left: 400px;
   }
   .this__price{
     font-family: Museo Sans Cyrl;
