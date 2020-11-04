@@ -22,10 +22,10 @@ export default {
   components: {
     HeaderTour,
     MainTour,
+    SliderTour,
     PopularTour,
     FormTour,
     FooterTour,
-    SliderTour,
   },
 };
 </script>

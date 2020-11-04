@@ -1,6 +1,7 @@
-<template  class="all">
+<template>
+  <div  class="all">
      <div class="line"></div>
-  <div class="formtour">
+  <div class="formtour"></div>
      <div class="form__title">
        <h3>Заявка на подбор путешествия</h3>
      </div>
@@ -84,7 +85,7 @@
      <div class="btn">
        <button>Отправить <img id="img" src="../assets/img/arrbutton.png" alt=""></button>
      </div>
-   </div>
+  </div>
 </template>
 
 <script>
@@ -128,29 +129,40 @@ export default {
   * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
   }
   .all{
     margin: 0 auto;
+    background-image: url('../assets/img/ellipse.png');
+    background-repeat: no-repeat;
+    width: 1000px;
+    height: 520px;
+    background-size: contain;
+    background-position-y: center;
+    position: absolute;
+    top: 1648px;
+    left: 437px;
+    z-index: 10000;
   }
   .error{
-    font-family: Museo Sans Cyrl;
+    font-family: Museo Sans Cyrl,sans-serif;
     font-style: normal;
     color: red;
     font-size: 12px;
 
     position: absolute;
-    top: 2019px;
-    left:535px;
+    top: 500px;
+    left:100px;
   }
   .error__name{
-    font-family: Museo Sans Cyrl;
+    font-family: Museo Sans Cyrl, sans-serif;
     font-style: normal;
     color: red;
     font-size: 12px;
 
     position: absolute;
-    top: 1847px;
-    left:535px;
+    top: 310px;
+    left:100px;
   }
   .formtour{
   }
@@ -164,15 +176,14 @@ export default {
     color: #000000;
 
     position: absolute;
-    top: 1575px;
-    right:620px;
+    top: 15px;
+    left:122px;
   }
 
   .about{
     position: absolute;
-    top: 1649px;
-    left: 540px;
-    padding-top: 70px;
+    top: 132px;
+    left: 59px;
 
     font-family: Museo Sans Cyrl, sans-serif;
     font-size: 10px;
@@ -184,7 +195,7 @@ export default {
   }
   .label__name{
     position: absolute;
-    top: 1770px;
+    top: 210px;
     left: 100px;
 
     font-family: Museo Sans Cyrl, sans-serif;
@@ -198,8 +209,8 @@ export default {
   }
   .label__tel{
     position: absolute;
-    top: 1770px;
-    padding-left: 500px;
+    top: 210px;
+    left: 520px;
 
     font-family: Museo Sans Cyrl, sans-serif;
     font-size: 12px;
@@ -215,16 +226,14 @@ export default {
     width: 380px;
     height: 50px;
     padding: 30px;
-  }
-  #name{
     position: absolute;
-    top: 1785px;
-    left:535px;
+    top: 240px;
+    left:100px;
   }
   #tel{
     position: absolute;
-    top: 1785px;
-    left:940px;
+    top:  240px;
+    left: 520px;
     background: #FFFFFF;
     border: 1px solid #E7E7E7;
     box-sizing: border-box;
@@ -235,9 +244,8 @@ export default {
   }
   .about__advice{
     position: absolute;
-    top: 1835px;
-    left: 540px;
-    padding-top: 70px;
+    top: 350px;
+    left: 59px;
 
     font-family: Museo Sans Cyrl, sans-serif;
     font-size: 12px;
@@ -246,8 +254,8 @@ export default {
   }
   .advice{
     position: absolute;
-    top: 1940px;
-    padding-left: 100px;
+    top: 400px;
+    left: 100px;
 
     font-family: Museo Sans Cyrl, sans-serif;
     font-size: 12px;
@@ -257,8 +265,8 @@ export default {
   }
   #advice{
     position: absolute;
-    top: 1955px;
-    left:535px;
+    top: 430px;
+    left:100px;
     background: #FFFFFF;
     border: 1px solid #E7E7E7;
     box-sizing: border-box;
@@ -269,8 +277,8 @@ export default {
   }
   .when{
     position: absolute;
-    top: 1940px;
-    padding-left: 500px;
+    top: 400px;
+    left: 520px;
 
     font-family: Museo Sans Cyrl,sans-serif;
     font-size: 12px;
@@ -280,8 +288,8 @@ export default {
   }
   #when{
     position: absolute;
-    top:1955px;
-    left:939px;
+    top:430px;
+    left:520px;
     background: #FFFFFF;
     border: 1px solid #E7E7E7;
     box-sizing: border-box;
@@ -292,8 +300,8 @@ export default {
   }
   .connection{
     position: absolute;
-    top: 1970px;
-    left: 540px;
+    top: 500px;
+    left: 59px;
     padding-top: 70px;
 
     font-family: Museo Sans Cyrl,sans-serif;
@@ -303,8 +311,7 @@ export default {
   }
   .check{
     display: flex;
-    position: relative;
-    top: -1000px;
+    position: absolute;
   }
   .label__viber{
     display:block;
@@ -312,8 +319,8 @@ export default {
     font-size: 16px;
     line-height: 12px;
     position: absolute;
-    top: 2100px;
-    left: 555px;
+    top: 630px;
+    left: 100px;
     width: 40px;
     height: 40px;
   }
@@ -324,8 +331,8 @@ export default {
     border:1px solid #8C8C8C;
     background-color: #FFFFFF;
     position:absolute;
-    top: 2120px;
-    left: 555px;
+    top: 660px;
+    left: 100px;
     -webkit-appearance: none;
     appearance: none;
     outline: none;
@@ -333,8 +340,8 @@ export default {
   .span__viber::before{
     content: "";
     position: relative;
-    top: 350px;
-    left: 125px;
+    top: 675px;
+    left:110px ;
     display: block;
     width:40px ;
     height: 40px;
@@ -352,8 +359,8 @@ export default {
     font-size: 16px;
     line-height: 12px;
     position: absolute;
-    top: 2100px;
-    left: 625px;
+    top: 630px;
+    left: 180px;
   }
   #whatsapp{
     width: 40px;
@@ -362,8 +369,8 @@ export default {
     border:1px solid #8C8C8C;
     background-color: #FFFFFF;
     position:absolute;
-    top: 2120px;
-    left: 635px;
+    top: 660px;
+    left: 190px;
     -webkit-appearance: none;
     appearance: none;
     outline: none;
@@ -390,16 +397,16 @@ export default {
     font-size: 16px;
     line-height: 12px;
     position: absolute;
-    top: 2100px;
-    left: 720px;
+    top: 630px;
+    left: 280px;
   }
   #mail{
     width: 40px;
     height: 40px;
     border-radius:3px;
     position:absolute;
-    top: 2120px;
-    left: 720px;
+    top: 660px;
+    left: 280px;
     border:1px solid #8C8C8C;
     background-color: #FFFFFF;
     -webkit-appearance: none;
@@ -428,16 +435,16 @@ export default {
     font-size: 16px;
     line-height: 12px;
     position: absolute;
-    top: 2100px;
-    left: 780px;
+    top: 630px;
+    left: 350px;
   }
   #telephone{
     width: 40px;
     height: 40px;
     border-radius:3px;
     position:absolute;
-    top: 2120px;
-    left: 790px;
+    top: 660px;
+    left: 360px;
     border:1px solid #8C8C8C;
     background-color: #FFFFFF;
     -webkit-appearance: none;
@@ -462,9 +469,8 @@ export default {
   }
   .about__us_text{
     position: absolute;
-    top: 1970px;
-    left: 950px;
-    padding-top: 70px;
+    top: 570px;
+    left: 540px;
 
     font-family: Museo Sans Cyrl, sans-serif;
     font-size: 12px;
@@ -481,16 +487,16 @@ export default {
     font-size: 16px;
     line-height: 12px;
     position: absolute;
-    top: 2100px;
-    left: 950px;
+    top: 630px;
+    left: 540px;
   }
   #internet{
     width: 40px;
     height: 40px;
     border-radius:3px;
     position:absolute;
-    top: 2120px;
-    left: 960px;
+    top: 660px;
+    left: 550px;
     border:1px solid #8C8C8C;
     background-color: #FFFFFF;
     -webkit-appearance: none;
@@ -520,8 +526,8 @@ export default {
     font-size: 16px;
     line-height: 12px;
     position: absolute;
-    top: 2090px;
-    left: 1030px;
+    top: 630px;
+    left: 640px;
   }
   .frends{
      padding-left:40px;
@@ -531,8 +537,8 @@ export default {
     height: 40px;
     border-radius:3px;
     position:absolute;
-    top: 2120px;
-    left: 1070px;
+    top: 660px;
+    left: 670px;
     border:1px solid #8C8C8C;
     background-color: #FFFFFF;
     -webkit-appearance: none;
@@ -561,16 +567,16 @@ export default {
     font-size: 16px;
     line-height: 12px;
     position: absolute;
-    top: 2100px;
-    left: 1160px;
+    top: 630px;
+    left: 780px;
   }
   #soc{
     width: 40px;
     height: 40px;
     border-radius:3px;
     position:absolute;
-    top: 2120px;
-    left: 1170px;
+    top: 660px;
+    left: 800px;
     border:1px solid #8C8C8C;
     background-color: #FFFFFF;
     -webkit-appearance: none;
@@ -599,16 +605,16 @@ export default {
     font-size: 16px;
     line-height: 12px;
     position: absolute;
-    top: 2100px;
-    left: 1260px;
+    top: 630px;
+    left: 860px;
   }
   #already__went{
     width: 40px;
     height: 40px;
     border-radius:3px;
     position:absolute;
-    top: 2120px;
-    left: 1270px;
+    top: 660px;
+    left: 880px;
     border:1px solid #8C8C8C;
     background-color: #FFFFFF;
     -webkit-appearance: none;
@@ -639,8 +645,8 @@ export default {
     position: absolute;
     width: 15px;
     height: 15px;
-    top: 2200px;
-    left: 475px;
+    top: 748px;
+    left: 59px;
 
     background: #FFFFFF;
     border: 1px solid #E7E7E7;
@@ -674,8 +680,8 @@ export default {
     position: absolute;
     width: 266px;
     height: 12px;
-    top: 2200px;
-    left: 500px;
+    top: 750px;
+    left: 79px;
 
     font-family: Museo Sans Cyrl, sans-serif;
     font-style: normal;
@@ -688,13 +694,14 @@ export default {
     position: absolute;
     width: 750px;
     height: 24px;
-    left: 500px;
-    top: 2238px;
+    top: 780px;
+    left: 79px;
 
     font-family: Museo Sans Cyrl, sans-serif;
     font-size: 12px;
     line-height: 12px;
-    color: #7c7a7a;
+    color: #C1C1C1;
+  ;
   }
   /*personal*/
   .personal{
@@ -704,8 +711,8 @@ export default {
     position: absolute;
     width: 15px;
     height: 15px;
-    top: 2300px;
-    left: 475px;
+    top: 870px;
+    left: 59px;
     box-sizing: border-box;
     border-radius: 3px;
     border:1px solid #CB0037;
@@ -719,8 +726,8 @@ export default {
     position: absolute;
     width: 266px;
     height: 12px;
-    top: 2300px;
-    left: 500px;
+    top: 870px;
+    left: 79px;
 
     font-family: Museo Sans Cyrl, sans-serif;
     font-style: normal;
@@ -732,8 +739,8 @@ export default {
   .span__personal::before{
     content: "";
     position: relative;
-    top: 300px;
-    left: 34px;
+    top: 870px;
+    left: 59px;
     display: block;
     width:15px ;
     height: 15px;
@@ -755,13 +762,13 @@ export default {
     position: absolute;
     width: 750px;
     height: 24px;
-    left: 500px;
-    top: 2338px;
+    top: 900px;
+    left: 79px;
 
     font-family: Museo Sans Cyrl, sans-serif;
     font-size: 12px;
     line-height: 12px;
-    color: #7c7a7a;
+    color: #C1C1C1;
   }
   /*field*/
   .field{
@@ -771,8 +778,8 @@ export default {
     position: absolute;
     width: 310px;
     height: 12px;
-    left: 500px;
-    top: 2390px;
+    left: 79px;
+    top: 970px;
 
     font-family: Museo Sans Cyrl, sans-serif;
     font-size: 10px;
@@ -781,8 +788,8 @@ export default {
   /*btn*/
   .btn{
     position: absolute;
-    left: 500px;
-    top: 2450px;
+    left: 79px;
+    top: 990px;
   }
   button{
     width: 280px;

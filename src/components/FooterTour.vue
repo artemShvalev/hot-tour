@@ -36,13 +36,13 @@ export default {
     padding: 0;
   }
   .footer{
-    background: #E5E5E5;
+    background: #ffffff;
     width: 1024px;
     margin: 0 auto;
     display: flex;
     position: absolute;
-    top: -106px;
-    left:0px;
+    top: 106px;
+    left:0;
   }
   .img__footer{
     position: absolute;
