@@ -301,7 +301,7 @@ export default {
     padding-left:12px;
     padding-bottom:10px ;
   }
-  @media (max-width: 576px) {
+  @media (max-width: 375px) {
     main{
       width: 375px;
       background: #FFFFFF;

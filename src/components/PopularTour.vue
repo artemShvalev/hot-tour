@@ -10,7 +10,7 @@
         :watchOverflow="true"
         :centeredSlidesBounds="true"
         :followFinger="true"
-        :resistanceRatio="0.5"
+        :resistanceRatio="0.9"
         :watchSlidesProgress="true"
         >
         <swiper-slide >
@@ -76,7 +76,7 @@
           </div>
         </swiper-slide>
         <swiper-slide >
-          <div class="content__box slider__3-box">
+          <div class="content__box slider__3-box slider4__mobile">
             <div class="content__img slider__content-img">
               <img src="../assets/img/popular1.png" alt="">
             </div>
@@ -268,25 +268,53 @@ export default {
   .swiper-slide-active:nth-last-child(4){
     display: none;
   }
-
-  @media (max-width: 576px){
+/*mobile*/
+  @media (max-width: 375px){
+    .swiper-container{
+    display: flex;
+    position: absolute;
+    top: 100px;
+    left: -420px;
+    width: 400px;
+    z-index: 1;
+  }
+  .swiper-slide{
+    width: 800px;
+  }
     .content{
-      background-color: #FFFFFF;
     }
+    .content__box{ /*1 слайд */
+      width: 200px;
+    }
+    .content__img-2{/*2 слайд*/
+      width: 200px;
+      position: relative;
+      left: 300px;
+    }
+    .slider__3-box{ /*3 слайд */
+    }
+    .slider4__mobile{/*4 слайд*/
+     }
+    .slider__content-img{
+      width: 200px;
+      position: relative;
+      right: 600px;
+    }
+     .slider__3box-price{
+     }
     .line{
       background-image: url("../assets/img/line.png");
       position: absolute;
       width: 340px;
       height: 2px;
       left: 18px;
-      top: 1353px;
+      top: 1100px;
     }
     .popular__title{
       position: absolute;
-      width: 350px;
-      height: 87px;
-      left: 70px;
-      top: 1346px;
+      width: 300px;
+      left: -400px;
+      top: 100px;
 
       font-family: Museo Sans Cyrl, sans-serif;
       font-style: normal;
@@ -295,17 +323,10 @@ export default {
       line-height: 43px;
     }
     .content__box{
-      position: absolute;
-      width: 253px;
-      height: 158px;
-      top: 1400px;
-      left: -95px;
     }
     .subtitle-2{
-      font-family: Museo Sans Cyrl,sans-serif;
-      font-size: 9px;
-      line-height: 11px;
-      color: #000000;
     }
+    .content__img-2{
+   }
   }
 </style>

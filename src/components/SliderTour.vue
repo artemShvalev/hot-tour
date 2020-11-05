@@ -546,7 +546,7 @@ export default {
     padding-bottom:10px ;
   }
   /*mobile*/
-  @media (max-width: 576px) {
+  @media (max-width: 375px) {
     .swiper-button-next{
       display: none;
     }
@@ -554,30 +554,14 @@ export default {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-    }
-    .block-1{
-      padding-left: 10px;
-      padding-top:30px ;
-    }
-    .block-2{
       position: absolute;
-      width: 340px;
-      height: 194px;
-      left: 18px;
-      top: 575px;
-      padding-top:35px ;
     }
-    .block-3{
-      position: absolute;
-      width: 340px;
-      height: 196px;
-      left: 18px;
-      top: 931px;
-      padding-top:35px ;
-    }
-    .block-4{
-      display: none;
-    }
+      .swiper-container{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: -414px;
+  }
   }
 
 </style>
