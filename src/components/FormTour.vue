@@ -378,8 +378,8 @@ export default {
   .span__w::before{
     content: "";
     position: relative;
-    top: 310px;
-    left: 205px;
+    top: 635px;
+    left:200px ;
     display: block;
     width:40px ;
     height: 40px;
@@ -416,8 +416,8 @@ export default {
   .span__mail::before{
     content: "";
     position: relative;
-    top: 270px;
-    left: 290px;
+   top: 595px;
+    left:290px ;
     display: block;
     width:40px ;
     height: 40px;
@@ -453,9 +453,9 @@ export default {
   }
   .span__telephone::before{
     content: "";
-    position: relative;
-    top: 230px;
-    left: 360px;
+    position: absolute;
+       top: 675px;
+       left: 370px;
     display: block;
     width:40px ;
     height: 40px;
@@ -505,9 +505,9 @@ export default {
   }
   .span__internet::before{
     content: "";
-    position: relative;
-    top: 188px;
-    left: 410px;
+    position: absolute;
+    top: 675px;
+    left: 560px;
     display: block;
     width:40px ;
     height: 40px;
@@ -547,9 +547,9 @@ export default {
   }
   .span__recommendation::before{
     content: "";
-    position: relative;
-    top: 188px;
-    left: 480px;
+   position: absolute;
+    top: 675px;
+    left: 680px;
     display: block;
     width:40px ;
     height: 40px;
@@ -585,9 +585,9 @@ export default {
   }
   .span__soc::before{
     content: "";
-    position: relative;
-    top: 188px;
-    left: 540px;
+   position: absolute;
+    top: 675px;
+    left: 810px;
     display: block;
     width:40px ;
     height: 40px;
@@ -623,9 +623,9 @@ export default {
   }
   .span__went::before{
     content: "";
-    position: relative;
-    top: 188px;
-    left: 601px;
+    position: absolute;
+    top: 675px;
+    left: 890px;
     display: block;
     width:40px ;
     height: 40px;
@@ -659,8 +659,8 @@ export default {
   .rss__span::before{
     content: "";
     position: relative;
-    top: 217px;
-    left: 36px;
+    top: 628px;
+    left: 59px;
     display: block;
     width:15px ;
     height: 15px;
@@ -739,8 +739,8 @@ export default {
   .span__personal::before{
     content: "";
     position: relative;
-    top: 870px;
-    left: 59px;
+    top: 734px;
+    left: 58px;
     display: block;
     width:15px ;
     height: 15px;
@@ -788,8 +788,8 @@ export default {
   /*btn*/
   .btn{
     position: absolute;
-    left: 79px;
-    top: 990px;
+    left: 89px;
+    top: 999px;
   }
   button{
     width: 280px;
@@ -799,6 +799,7 @@ export default {
     font-family: Museo Sans Cyrl, sans-serif;
     font-size: 14px;
     line-height: 14px;
+    outline: none;
   }
   #img{
    padding-left: 160px;
