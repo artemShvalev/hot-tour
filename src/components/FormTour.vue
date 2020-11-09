@@ -24,7 +24,7 @@
          <input type="text" name="name" id="advice"
                 placeholder="Континент, страна или город" v-model.trim="required">
        <div class="error" v-if="!required">Вы длолжны ввести страну или регион</div>
-       <label for="when" class="when">Когда</label>
+       <label for="when" class="when">Когда?</label>
          <input :type="data" name="date" id="when" placeholder="Даты или временной  интервал">
      </div>
      <div class="connection">
@@ -701,7 +701,6 @@ export default {
     font-size: 12px;
     line-height: 12px;
     color: #C1C1C1;
-  ;
   }
   /*personal*/
   .personal{
@@ -753,7 +752,7 @@ export default {
   }
   #personal:checked + .span__personal::before{
     opacity: 1;
-    border:1px solid #FFFFFF;
+    border:1px solid #ac0909;
     transition: all .5s;
     z-index:1 ;
     outline: none;
@@ -805,8 +804,8 @@ export default {
    padding-left: 160px;
   }
 
-  @media (max-width: 576px){
-    .formtour{
+  @media (max-width: 375px){
+    .all{
       background-color: #FFFFFF;
       background-image: none;
     }
@@ -814,16 +813,16 @@ export default {
       position: absolute;
       width: 340px;
       height: 2px;
-      left: 52px;
-      top: 1954px;
+      left: -420px;
+      top: 100px;
       background: #C4C4C4;
     }
     .form__title{
       position: absolute;
       width: 340px;
       height: 87px;
-      left: 18px;
-      top: 1964px;
+      left: -420px;
+      top: 120px;
       font-family: Museo Sans Cyrl, sans-serif;
       font-size: 36px;
       line-height: 43px;
@@ -831,8 +830,8 @@ export default {
     }
     .about{
       position: absolute;
-      left: 18px;
-      top: 2080px;
+      left: -420px;
+      top: 320px;
 
       font-family: Museo Sans Cyrl, sans-serif;
       font-size: 12px;
@@ -841,10 +840,8 @@ export default {
     }
     .label__name{
       position: absolute;
-      width: 30px;
-      height: 12px;
-      left: -80px;
-      top: 2200px;
+      left: -400px;
+      top: 380px;
       font-family: Museo Sans Cyrl,sans-serif;
       font-size: 12px;
       line-height: 12px;
@@ -852,10 +849,10 @@ export default {
     }
     #name{
       position: absolute;
-      width: 340px;
+      width: 320px;
       height: 50px;
-      left: 18px;
-      top: 2230px;
+      left: -410px;
+      top: 400px;
       background: #FFFFFF;
       border: 1px solid #E7E7E7;
       box-sizing: border-box;
@@ -867,16 +864,16 @@ export default {
       color: red;
       font-size: 12px;
       position: absolute;
-      top: 2295px;
-      left:150px;
+      left: -400px;
+      top: 470px;
       line-height: 12px;
     }
     .label__tel{
       position: absolute;
       width: 49px;
       height: 12px;
-      left: -483px;
-      top: 2320px;
+      left: -400px;
+      top: 500px;
       font-family: Museo Sans Cyrl, sans-serif;
       font-size: 12px;
       line-height: 12px;
@@ -884,10 +881,10 @@ export default {
     }
     #tel{
       position: absolute;
-      width: 340px;
+      width: 320px;
       height: 50px;
-      left: 18px;
-      top: 2340px;
+      left: -410px;
+      top: 520px;
       background: #FFFFFF;
       border: 1px solid #E7E7E7;
       box-sizing: border-box;
@@ -895,8 +892,8 @@ export default {
     }
     .about__advice{
       position: absolute;
-      left: 18px;
-      top: 2380px;
+      left: -420px;
+      top: 620px;
       font-family: Museo Sans Cyrl,sans-serif;
       font-size: 12px;
       line-height: 12px;
@@ -905,8 +902,8 @@ export default {
       position: absolute;
       width: 174px;
       height: 12px;
-      left: -80px;
-      top: 2490px;
+      left: -400px;
+      top: 660px;
       font-family: Museo Sans Cyrl, sans-serif;
       font-size: 12px;
       line-height: 12px;
@@ -914,10 +911,10 @@ export default {
     }
     #advice{
       position: absolute;
-      width: 340px;
+      width: 320px;
       height: 50px;
-      left: 18px;
-      top: 2520px;
+      left: -410px;
+      top: 660px;
       background: #FFFFFF;
       border: 1px solid #E7E7E7;
       box-sizing: border-box;
@@ -929,26 +926,26 @@ export default {
       color: red;
       font-size: 12px;
       position: absolute;
-      top: 2580px;
-      left:75px;
+      left: -400px;
+      top: 730px;
       line-height: 12px;
     }
     .when{
       position: absolute;
       width: 38px;
       height: 12px;
-      left: -480px;
-      top: 2610px;
+      left: -400px;
+      top: 770px;
       font-family: Museo Sans Cyrl,sans-serif;
       font-size: 12px;
       line-height: 12px;
     }
     #when{
       position: absolute;
-      width: 340px;
+      width: 320px;
       height: 50px;
-      left: 18px;
-      top: 2630px;
+      left: -410px;
+      top: 790px;
       background: #FFFFFF;
       border: 1px solid #E7E7E7;
       box-sizing: border-box;
@@ -957,28 +954,40 @@ export default {
     /*Checkboxes*/
     .connection{
       position: absolute;
-      left: 18px;
-      top: 2690px;
+      left: -410px;
+      top: 795px;
       font-family: Museo Sans Cyrl, sans-serif;
       font-size: 12px;
       line-height: 12px;
     }
-    /*Section labels*/
-    /*viber*/
+    /* Section viber*/
     .label__viber{
       position: absolute;
-      left: 53px;
-      top: 2800px;
+      left: -400px;
+      top: 910px;
       font-family: Museo Sans Cyrl,sans-serif;
       font-size: 12px;
       line-height: 12px;
       color: #000000;
     }
+    #viber{
+      width: 40px;
+      height: 40px;
+      border-radius:3px;
+      border:1px solid #8C8C8C;
+      background-color: #FFFFFF;
+      position:absolute;
+      top: 940px;
+      left: -406px;
+      -webkit-appearance: none;
+      appearance: none;
+      outline: none;
+    }
     .span__viber::before{
       content: "";
       position: relative;
-      top: 350px;
-      left: 125px;
+      top: 955px;
+      left: -396px;
       display: block;
       width:40px ;
       height: 40px;
@@ -990,191 +999,287 @@ export default {
       opacity: 1;
       transition: all .4s ease-in-out .3s;
     }
-    /*Whatsapp*/
+    /* Section Whatsapp*/
     .label__whatsaap{
       position: absolute;
-      left: 120px;
-      top: 2800px;
+      top: 910px;
+      left: -340px;
       font-family: Museo Sans Cyrl,sans-serif;
       font-size: 12px;
       line-height: 12px;
       color: #000000;
-    }
-    .label__mail{
-      position: absolute;
-      left: 215px;
-      top: 2800px;
-      font-family: Museo Sans Cyrl,sans-serif;
-      font-size: 12px;
-      line-height: 12px;
-      color: #000000;
-    }
-    .label__telephone{
-      position: absolute;
-      left: 280px;
-      top: 2800px;
-      font-family: Museo Sans Cyrl,sans-serif;
-      font-size: 12px;
-      line-height: 12px;
-      color: #000000;
-    }
-    /*Section inputs*/
-    .input__check{
-      position: absolute;
-      width: 40px;
-      height: 40px;
-      left: 48px;
-      top: 2820px;
-
-      background: #FFFFFF;
-      border: 1px solid #E7E7E7;
-      box-sizing: border-box;
-      border-radius: 3px;
     }
     #whatsapp{
       position: absolute;
       width: 40px;
       height: 40px;
-      left: 128px;
-      top: 2820px;
+      top: 940px;
+      left: -337px;
 
       background: #FFFFFF;
-      border: 1px solid #E7E7E7;
+      border:1px solid #8C8C8C;
       box-sizing: border-box;
       border-radius: 3px;
+    }
+    .span__w::before{
+      content: "";
+      position: relative;
+      top: 914px;
+      left: -327px;
+      display: block;
+      width:40px ;
+      height: 40px;
+      background-size: 19px 11px;
+      background: url("../assets/img/checkbox.png") no-repeat;
+      opacity: 0;
+    }
+    /* Section mail*/
+    .label__mail{
+      position: absolute;
+      top: 910px;
+      left: -250px;
+      font-family: Museo Sans Cyrl,sans-serif;
+      font-size: 12px;
+      line-height: 12px;
+      color: #000000;
     }
     #mail{
       position: absolute;
       width: 40px;
       height: 40px;
-      left: 215px;
-      top: 2820px;
+      top: 940px;
+      left: -253px;
 
       background: #FFFFFF;
-      border: 1px solid #E7E7E7;
+      border:1px solid #8C8C8C;
       box-sizing: border-box;
       border-radius: 3px;
+    }
+    .span__mail::before{
+      content: "";
+      position: relative;
+      top: 875px;
+      left: -242px;
+      display: block;
+      width:40px ;
+      height: 40px;
+      background-size: 19px 11px;
+      background: url("../assets/img/checkbox.png") no-repeat;
+      opacity: 0;
+    }
+    /*Section Telephone*/
+    .label__telephone{
+      position: absolute;
+      top: 910px;
+      left: -180px;
+      font-family: Museo Sans Cyrl,sans-serif;
+      font-size: 12px;
+      line-height: 12px;
+      color: #000000;
     }
     #telephone{
       position: absolute;
       width: 40px;
       height: 40px;
-      left: 290px;
-      top: 2820px;
+      top: 940px;
+      left: -178px;
       background: #FFFFFF;
-      border: 1px solid #E7E7E7;
+      border:1px solid #8C8C8C;
       box-sizing: border-box;
       border-radius: 3px;
     }
-    /*second section*/
+    .span__telephone::before{
+      content: "";
+      position: absolute;
+      top: 955px;
+      left: -167px;
+      display: block;
+      width:40px ;
+      height: 40px;
+      background-size: 19px 11px;
+      background: url("../assets/img/checkbox.png") no-repeat;
+      opacity: 0;
+    }
+    /*second section title */
     .about__us_text{
       position: absolute;
-      left: 18px;
-      top: 2830px;
+      left: -410px;
+      top: 1020px;
       font-family: Museo Sans Cyrl, sans-serif;
       font-size: 12px;
       line-height: 12px;
       color: #000000;
     }
-    /*Second section label*/
+    /*Second section input[type=checkbox] */
     .label__internet{
       position: absolute;
-      left: 41px;
-      top: 2945px;
+      left: -410px;
+      top: 1070px;
       font-family: Museo Sans Cyrl, sans-serif;
       font-size: 12px;
       line-height: 12px;
       color: #000000;
     }
+    #internet{
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      left: -407px;
+      top: 1100px;
+      background: #FFFFFF;
+      border:1px solid #8C8C8C;
+      box-sizing: border-box;
+      border-radius: 3px;
+    }
+    .span__internet::before{
+      content: "";
+      position: absolute;
+      left: -397px;
+      top: 1115px;
+      display: block;
+      width:40px ;
+      height: 40px;
+      background-size: 19px 11px;
+      background: url("../assets/img/checkbox.png") no-repeat;
+      opacity: 0;
+    }
+    /*Рекомендовали друзья*/
     .label__recommendation{
       position: absolute;
-      left: 110px;
-      top: 2945px;
+      left: -340px;
+      top: 1070px;
       font-family: Museo Sans Cyrl, sans-serif;
       font-size: 12px;
       line-height: 12px;
       color: #000000;
     }
-    .label__soc{
-      position: absolute;
-      left: 220px;
-      top: 2945px;
-      font-family: Museo Sans Cyrl, sans-serif;
-      font-size: 12px;
-      line-height: 12px;
-      color: #000000;
+    .frends{
+      padding-left:30px;
     }
-    .label__alredy_went{
-      position: absolute;
-      left: 290px;
-      top: 2945px;
-      font-family: Museo Sans Cyrl, sans-serif;
-      font-size: 12px;
-      line-height: 12px;
-      color: #000000;
-    }
-    /*Second section input*/
-     #internet{
-       position: absolute;
-       width: 40px;
-       height: 40px;
-       left: 48px;
-       top: 2990px;
-       background: #FFFFFF;
-       border: 1px solid #E7E7E7;
-       box-sizing: border-box;
-       border-radius: 3px;
-     }
     #recommendation{
       position: absolute;
       width: 40px;
       height: 40px;
-      left: 148px;
-      top: 2990px;
+      left: -317px;
+      top: 1100px;
       background: #FFFFFF;
-      border: 1px solid #E7E7E7;
+      border:1px solid #8C8C8C;
       box-sizing: border-box;
       border-radius: 3px;
+    }
+    .span__recommendation::before{
+      content: "";
+      position: absolute;
+      left: -308px;
+      top: 1115px;
+      display: block;
+      width:40px ;
+      height: 40px;
+      background-size: 19px 11px;
+      background: url("../assets/img/checkbox.png") no-repeat;
+      opacity: 0;
+    }
+    /*Section Social net*/
+    .label__soc{
+      position: absolute;
+      left: -230px;
+      top: 1070px;
+      font-family: Museo Sans Cyrl, sans-serif;
+      font-size: 12px;
+      line-height: 12px;
+      color: #000000;
     }
     #soc{
       position: absolute;
       width: 40px;
       height: 40px;
-      left: 228px;
-      top: 2990px;
+      left: -230px;
+      top: 1100px;
       background: #FFFFFF;
-      border: 1px solid #E7E7E7;
+      border:1px solid #8C8C8C;
       box-sizing: border-box;
       border-radius: 3px;
+    }
+    .span__soc::before{
+      content: "";
+      position: absolute;
+      left: -221px;
+      top: 1115px;
+      display: block;
+      width:40px ;
+      height: 40px;
+      background-size: 19px 11px;
+      background: url("../assets/img/checkbox.png") no-repeat;
+      opacity: 0;
+    }
+    /*Section "Already Went"*/
+    .label__alredy_went{
+      position: absolute;
+      left: -162px;
+      top: 1070px;
+      font-family: Museo Sans Cyrl, sans-serif;
+      font-size: 12px;
+      line-height: 12px;
+      color: #000000;
     }
     #already__went{
       position: absolute;
       width: 40px;
       height: 40px;
-      left: 300px;
-      top: 2990px;
+      left: -154px;
+      top: 1100px;
       background: #FFFFFF;
-      border: 1px solid #E7E7E7;
+      border:1px solid #8C8C8C;
       box-sizing: border-box;
       border-radius: 3px;
     }
+    .span__went::before{
+      content: "";
+      position: absolute;
+      left: -145px;
+      top: 1115px;
+      display: block;
+      width:40px ;
+      height: 40px;
+      background-size: 19px 11px;
+      background: url("../assets/img/checkbox.png") no-repeat;
+      opacity: 0;
+    }
     /*rules*/
+    .rss{
+      display: flex;
+    }
     #rss{
       position: absolute;
       width: 15px;
       height: 15px;
-      left: 18px;
-      top: 3070px;
+      left: -410px;
+      top: 1250px;
       background: #FFFFFF;
-      border: 1px solid #E7E7E7;
+      border:1px solid #8C8C8C;
       box-sizing: border-box;
       border-radius: 3px;
+    }
+    .rss__span::before{
+      content: "";
+      position: relative;
+      left: -410px;
+      top: 1130px;
+      display: block;
+      width:15px ;
+      height: 15px;
+      border-radius: 3px;
+      background-size: 4px 9px;
+      background: url("../assets/img/checboxSmall.png") no-repeat;
+      background-position-y: 4px;
+      background-position-x:1px;
+      opacity: 0;
     }
     .label__rss{
       position: absolute;
       width: 100%;
-      left: 48px;
-      top: 3070px;
+      left: -386px;
+      top: 1250px;
       font-family: Museo Sans Cyrl,sans-serif;
       font-size: 12px;
       color: #000000;
@@ -1183,29 +1288,49 @@ export default {
       position: absolute;
       width: 310px;
       height: 36px;
-      left: 48px;
-      top: 3090px;
+      left: -386px;
+      top: 1265px;
       font-family: Museo Sans Cyrl, sans-serif;
       font-size: 12px;
-      line-height: 12px;
+      line-height: 18px;
       color: #C1C1C1;
+    }
+    /*Personal && Modal window*/
+    .personal{
+      display:flex;
     }
     #personal{
       position: absolute;
-      width: 15px;
-      height: 15px;
-      left: 18px;
-      top: 3160px;
+      left: -410px;
+      top: 1370px;
       background: #FFFFFF;
-      border: 1px solid #E7E7E7;
+      border:1px solid #CB0037;
       box-sizing: border-box;
       border-radius: 3px;
+      width:15px ;
+      height: 15px;
+    }
+    .span__personal::before{
+      content: "";
+      position: absolute;
+      left: -410px;
+      top: 1370px;
+      display: block;
+      width:15px ;
+      height: 15px;
+      border:1px solid #CB0037;
+      border-radius: 3px;
+      background-size: 4px 9px;
+      background: url("../assets/img/checboxSmall.png") no-repeat;
+      background-position-y: 4px;
+      background-position-x:1px;
+      opacity: 0;
     }
     .label__personal{
       position: absolute;
       width: 100%;
-      left: 48px;
-      top: 3160px;
+      left: -386px;
+      top: 1370px;
       font-family: Museo Sans Cyrl,sans-serif;
       font-size: 12px;
       color: #000000;
@@ -1214,30 +1339,32 @@ export default {
       position: absolute;
       width: 310px;
       height: 36px;
-      left: 48px;
-      top: 3180px;
+      left: -386px;
+      top: 1390px;
       font-family: Museo Sans Cyrl, sans-serif;
       font-size: 12px;
-      line-height: 12px;
+      line-height: 18px;
       color: #C1C1C1;
     }
+    /*Field required*/
     .field__text{
       position: absolute;
       width: 310px;
       height: 12px;
-      left: 48px;
-      top: 3250px;
+      left: -386px;
+      top: 1470px;
       font-family: Museo Sans Cyrl, sans-serif;
       font-size: 12px;
       line-height: 12px;
       color: #C1C1C1;
     }
+    /*Кнопка*/
     button{
       position: absolute;
       width: 280px;
       height: 49px;
-      left: -453px;
-      top: 844px;
+      left: -478px;
+      top: 550px;
     }
   }
 

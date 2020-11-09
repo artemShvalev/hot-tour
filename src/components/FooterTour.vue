@@ -11,10 +11,10 @@
         <img src="../assets/img/linedown.png" alt="">
         </div>
       <div class="phones">
-        <span><a href="#"></a>8 (800) 123-45-67</span>
+        <a href="tel:88001234567">8 (800) 123-45-67</a>
       </div>
       <div class="phones__down">
-        <span>8 (800) 123-45-67</span>
+        <a href="tel:88001234567"><span>8 (800) 123-45-67</span></a>
       </div>
       </div>
     </div>
@@ -94,29 +94,40 @@ export default {
     color: #FFFFFF;
   }
   /*mobile*/
-  @media (max-width: 576px) {
+  @media (max-width: 375px) {
     .footer{
       position: absolute;
-      width: 375px;
-      left: -523px;
+      width: 100%;
+      left: -521px;
       top: 754px;
     }
     .img__footer,#img{
       width: 375px;
+      position: absolute;
+      left: 521px;
+    }
+    a{
+      text-decoration: none;
+      color: #ffffff;
+      width: 100%;
+    }
+    span{
+      width: 100px;
+      height: 100px;
     }
     .phones{
-      position: absolute;
+      position: relative;
       left: 611px;
-      top: 2662px;
+      right: 0;
+      bottom: 0;
       font-family: Museo Sans Cyrl, sans-serif;
       font-style: normal;
       font-weight: bold;
       font-size: 24px;
-      line-height: 29px;
-      letter-spacing: 0.1em;
       color: #FFFFFF;
     }
     .phones__down{
+      display: flex;
       position: absolute;
       left: 611px;
       top: 2775px;

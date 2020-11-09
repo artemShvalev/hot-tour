@@ -5,14 +5,17 @@
       <h2>Популярные туры</h2>
     </div>
     <swiper
-      navigation
+          navigation
       :speed="700"
       :watchOverflow="true"
       :centeredSlidesBounds="true"
       :followFinger="true"
-      :resistanceRatio="0.9"
-      :watchSlidesProgress="true"
-      autoplay
+      :resistanceRatio="0.5"
+      :watchSlidesProgress="false"
+      :setWrapperSize="true"
+      :slidesOffsetAfter="30"
+      :normalizeSlideIndex="true"
+      :touchRatio="2"
     >
       <swiper-slide>
         <div class="content__box">
@@ -64,11 +67,11 @@
           <div class="content__img-2  slider3__iceland">
             <img src="../assets/img/popular2.png" alt="" />
           </div>
-          <div class="box__price-2 slider3__iceland">
+          <div class="box__price-2 slider3__iceland--boxprice">
             <img src="../assets/img/box-price.png" alt="" />
             <p class="box__text">145 000 <span>₽</span></p>
           </div>
-          <div class="country-2 slide3__iceland">
+          <div class="country-2 slide3__iceland--country">
             <p>НОРВЕГИЯ, ШПИЦБЕРГЕН</p>
           </div>
           <div class="subtitle-2  slide3__iceland-salvabard">
@@ -91,7 +94,7 @@
           <div class="subtitle slider__3-subtitle slider4__subtitle">
             <h3>Открытие Турции</h3>
           </div>
-          <div class="content__img-2  slider4__content">
+          <div class="content__img-2  slider4__iceland">
             <img src="../assets/img/popular2.png" alt="" />
           </div>
           <div class="box__price-2  slider4__price">
@@ -277,73 +280,96 @@ export default {
   .swiper-container {
     position: absolute;
     top: 100px;
-    left: -420px;
-    max-width: 800px;
+    left: -450px;
+    padding: 0;
+    margin: 0 auto;
   }
   .swiper-wrapper{
   }
   .swiper-slide-next{
   }
   .swiper-slide {
+    display: flex;
   }
   /*1 слайд */
   .content__img {
     width: 253px;
     height: 158px;
     position: absolute;
-    left: 100px;
-  }
-  .slider__content-img {
-    z-index: 1;
-    width: 253px;
-    height: 158px;
-  }
-  .content__box {
-    position: relative;
-    left: 0;
-    padding: 30px;
+    left: 1010px;
   }
   .box__price {
-  }
-  /*2 слайд*/
-  .slider2__img{
-    z-index: 5;
     width: 253px;
     height: 158px;
     position: absolute;
-    left: 245px;
+    left: 1040px;
+    font-weight: bold;
+  }
+  .country{
+    position: absolute;
+    left: 1010px;
+  }
+  .subtitle{
+    position: absolute;
+    left: 1010px;
+  }
+  /*2 слайд*/
+  .slider2__img{
+    display: none;
+  }
+  .box__price-2{
+    display: none;
+  }
+  .country-2{
+    display: none;
+  }
+  .subtitle-2{
+    display: none;
   }
   /*3 слайд */
-  .slider__3-box {
-    z-index: 5;
+  .slider__content-img {
     width: 253px;
+    height: 158px;
+    position: absolute;
+    left: 500px;
   }
   .slider__3box-price{
+    position: absolute;
+    left: 530px;
   }
   .slider__3-counter{
+    position: absolute;
+    left: 500px;
   }
   .slider__3-subtitle{
+    position: absolute;
+    left: 500px;
   }
   .slider3__iceland{
-    z-index: 5;
     width: 253px;
+    height: 158px;
+    position: absolute;
+    left: 10px;
   }
-  .slider3__iceland{
+  .slide3__iceland--country{
+    position:absolute;
+    left: 100px;
   }
   .slide3__iceland{
   }
   .slide3__iceland-salvabard{
+    position:absolute;
+    left: 100px;
   }
   /*4 слайд*/
   .slider4__mobile {
+  }
+  .slider4__iceland{
     z-index: 5;
     width: 253px;
+    height: 158px;
     position: absolute;
-  }
-  .slider4__img{
-        z-index: 5;
-    width: 253px;
-    position: absolute;
+    left: -5500px;
   }
   .slider4__box-price{
   }
@@ -351,11 +377,7 @@ export default {
   }
   .slider4__subtitle{
   }
-
   .slider__content-img {
-    width: 200px;
-    position: relative;
-    right: 600px;
   }
   .slider__3box-price {
   }
