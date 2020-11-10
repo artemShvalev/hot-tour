@@ -65,6 +65,11 @@ export default {
     top: 2755px;
     left: 523px;
   }
+  a{
+    text-decoration: none;
+    color: #ffffff;
+    width: 100%;
+  }
   .phones{
     position: absolute;
     left: 670px;
@@ -101,10 +106,15 @@ export default {
       left: -521px;
       top: 754px;
     }
-    .img__footer,#img{
-      width: 375px;
+    #img{
+      display: none;
+    }
+    .img__footer{
+     max-width: 375px;
       position: absolute;
       left: 521px;
+      background-image: url("../assets/img/footer_mobile.png");
+      background-repeat: no-repeat;
     }
     a{
       text-decoration: none;
@@ -138,6 +148,9 @@ export default {
       line-height: 29px;
       letter-spacing: 0.1em;
       color: #FFFFFF;
+    }
+    .img__lineup{
+      position: absolute;
     }
   }
 

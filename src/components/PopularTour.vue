@@ -13,9 +13,6 @@
       :resistanceRatio="0.5"
       :watchSlidesProgress="false"
       :setWrapperSize="true"
-      :slidesOffsetAfter="30"
-      :normalizeSlideIndex="true"
-      :touchRatio="2"
     >
       <swiper-slide>
         <div class="content__box">
@@ -174,10 +171,11 @@ export default {
   font-size: 36px;
   line-height: 43px;
   color: #000000;
+  text-align:center;
 
   position: absolute;
-  left: 38%;
-  padding-top: 70px;
+  left: 25%;
+  padding-top: 90px;
 }
 .content__box {
   height: 500px;
@@ -283,103 +281,6 @@ export default {
     left: -450px;
     padding: 0;
     margin: 0 auto;
-  }
-  .swiper-wrapper{
-  }
-  .swiper-slide-next{
-  }
-  .swiper-slide {
-    display: flex;
-  }
-  /*1 слайд */
-  .content__img {
-    width: 253px;
-    height: 158px;
-    position: absolute;
-    left: 1010px;
-  }
-  .box__price {
-    width: 253px;
-    height: 158px;
-    position: absolute;
-    left: 1040px;
-    font-weight: bold;
-  }
-  .country{
-    position: absolute;
-    left: 1010px;
-  }
-  .subtitle{
-    position: absolute;
-    left: 1010px;
-  }
-  /*2 слайд*/
-  .slider2__img{
-    display: none;
-  }
-  .box__price-2{
-    display: none;
-  }
-  .country-2{
-    display: none;
-  }
-  .subtitle-2{
-    display: none;
-  }
-  /*3 слайд */
-  .slider__content-img {
-    width: 253px;
-    height: 158px;
-    position: absolute;
-    left: 500px;
-  }
-  .slider__3box-price{
-    position: absolute;
-    left: 530px;
-  }
-  .slider__3-counter{
-    position: absolute;
-    left: 500px;
-  }
-  .slider__3-subtitle{
-    position: absolute;
-    left: 500px;
-  }
-  .slider3__iceland{
-    width: 253px;
-    height: 158px;
-    position: absolute;
-    left: 10px;
-  }
-  .slide3__iceland--country{
-    position:absolute;
-    left: 100px;
-  }
-  .slide3__iceland{
-  }
-  .slide3__iceland-salvabard{
-    position:absolute;
-    left: 100px;
-  }
-  /*4 слайд*/
-  .slider4__mobile {
-  }
-  .slider4__iceland{
-    z-index: 5;
-    width: 253px;
-    height: 158px;
-    position: absolute;
-    left: -5500px;
-  }
-  .slider4__box-price{
-  }
-  .slider4__country{
-  }
-  .slider4__subtitle{
-  }
-  .slider__content-img {
-  }
-  .slider__3box-price {
   }
   .line {
     background-image: url("../assets/img/line.png");

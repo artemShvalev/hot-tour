@@ -135,14 +135,15 @@ export default {
     margin: 0 auto;
     background-image: url('../assets/img/ellipse.png');
     background-repeat: no-repeat;
-    width: 1000px;
-    height: 520px;
+    width: 782px;
+    height: 570px;
     background-size: contain;
     background-position-y: center;
+    background-position-x:200px;
     position: absolute;
     top: 1648px;
     left: 437px;
-    z-index: 10000;
+    z-index: 50000;
   }
   .error{
     font-family: Museo Sans Cyrl,sans-serif;
@@ -177,7 +178,7 @@ export default {
 
     position: absolute;
     top: 15px;
-    left:122px;
+    left:265px;
   }
 
   .about{

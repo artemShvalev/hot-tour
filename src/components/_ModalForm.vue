@@ -135,5 +135,18 @@ export default {
     border-radius:3px;
     margin-left:30px ;
   }
-
+  @media (max-width: 375px) {
+    .modal {
+      background: #FFFFFF;
+      overflow-x: auto;
+      display: flex;
+      flex-direction: column;
+      font-family: "Roboto Light",sans-serif;
+      font-size:16px;
+      padding: 15px;
+      position: absolute;
+      top: 1500px;
+      left:40px;
+    }
+  }
 </style>
