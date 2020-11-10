@@ -1,4 +1,4 @@
-# hot-tour(test task for Junior)
+# Hot-tour(test task for Junior)
 
 ## Project setup
 1. Fork or Download zip archive
@@ -10,3 +10,9 @@ npm install
 ```
 npm run serve
 ```
+
+##Technology use
+1.:green_heart: Vue.js
+2.Sass(no't Node-sass module )
+3.Vuelidate{for validation )
+4.Vue-Swiper(for Slide and Carousel)
