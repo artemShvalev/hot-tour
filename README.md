@@ -1,24 +1,12 @@
-# hot-tour
+# hot-tour(test task for Junior)
 
 ## Project setup
+1. Fork or Download zip archive
+2. Inititial your console command:
 ```
 npm install
 ```
-
-### Compiles and hot-reloads for development
+3.If you want run with developmening mod:
 ```
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
