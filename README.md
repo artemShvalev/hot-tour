@@ -11,8 +11,11 @@ npm install
 npm run serve
 ```
 
-##Technology use
-1.:green_heart: Vue.js
-2.Sass(no't Node-sass module )
-3.Vuelidate{for validation )
-4.Vue-Swiper(for Slide and Carousel)
+## Technology use:
++ :green_heart: Vue.js
++ Sass(no't Node-sass module )
++ [Vuelidate](https://vuelidate.js.org/)(for validation )
++ [Vue-Swiper](https://swiperjs.com/vue/)(for Slide and Carousel)
+
+
+### Have nice day!
